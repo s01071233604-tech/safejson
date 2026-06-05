@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      :root {
+        --bg: #09090b;
+        --surface: #18181b;
+        --border: #27272a;
+        --text: #d4d4d8;
+        --text-dim: #71717a;
+        --accent: #34d399;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        width: 300px;
+        background: var(--bg);
+        color: var(--text);
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        padding: 16px;
+      }
+      .brand {
+        font-size: 18px;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        margin-bottom: 12px;
+      }
+      .brand span {
+        color: var(--accent);
+      }
+      .desc {
+        color: var(--text-dim);
+        font-size: 12px;
+        line-height: 1.5;
+        margin-bottom: 16px;
+      }
+      .status {
+        padding: 10px 12px;
+        border-radius: 8px;
+        border: 1px solid rgba(52, 211, 153, 0.15);
+        background: rgba(52, 211, 153, 0.06);
+        font-size: 12px;
+        margin-bottom: 16px;
+        color: var(--accent);
+      }
+      .status.inactive {
+        border-color: var(--border);
+        background: var(--surface);
+        color: var(--text-dim);
+      }
+      button {
+        width: 100%;
+        padding: 10px 16px;
+        border-radius: 10px;
+        border: 1px solid var(--accent);
+        background: var(--accent);
+        color: #09090b;
+        font-size: 13px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: opacity 0.15s;
+        font-family: inherit;
+      }
+      button:hover {
+        opacity: 0.9;
+      }
+      button.secondary {
+        background: transparent;
+        border-color: var(--border);
+        color: var(--text);
+        margin-top: 8px;
+      }
+      .footer {
+        margin-top: 16px;
+        text-align: center;
+        font-size: 11px;
+        color: var(--text-dim);
+      }
+      .footer a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="brand"><span>{</span>SafeJSON<span>}</span></div>
+    <div class="desc">
+      Privacy-first JSON formatter. Auto-detects JSON responses and formats
+      them instantly in your browser. No tracking. No uploads.
+    </div>
+    <div id="status" class="status inactive">
+      Navigate to a JSON endpoint to format it
+    </div>
+    <button id="open-tool">Open SafeJSON Web Tool</button>
+    <div class="footer">
+      <a href="https://github.com" target="_blank">Open Source</a>
+      &middot; Zero data collection
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>

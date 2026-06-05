@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SafeJSON — The JSON tool that never sees your data
 
-## Getting Started
+A privacy-first JSON formatter. Format, validate, and debug JSON entirely in your browser. No server. No ads. No tracking.
 
-First, run the development server:
+## Why SafeJSON?
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+In November 2025, popular online JSON tools were caught leaking over 80,000 credentials — AWS keys, GitHub tokens, and banking details. Around the same time, the most popular JSON Formatter browser extension (2M+ users) was sold, closed-sourced, and injected with adware.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+SafeJSON is different: **all processing happens in your browser. Zero network requests.**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Web Tool ([safejson.vercel.app](https://safejson.vercel.app))
+- Instant JSON formatting with syntax highlighting
+- Collapsible tree view for exploring nested structures
+- Error detection with line and column numbers
+- Copy / Download formatted JSON
+- Dark theme by default
+- Cmd+Enter to format
 
-## Learn More
+### Browser Extension
+- Auto-detects JSON responses on any URL
+- Syntax highlighting: strings (green), numbers (gold), booleans (cyan), null (gray)
+- One-click Copy / Raw toggle
+- "Open in SafeJSON" button for full tree view inspection
+- Available on Edge Add-ons
 
-To learn more about Next.js, take a look at the following resources:
+## How to verify the privacy claim
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Open [safejson.vercel.app](https://safejson.vercel.app)
+2. Open DevTools → Network tab
+3. Paste any JSON
+4. Observe: **zero network requests**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+All formatting runs client-side. Your data never leaves your browser.
 
-## Deploy on Vercel
+## Install the extension
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### From Edge Add-ons Store
+Search "SafeJSON" in the Edge Add-ons store.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Manual install (Chrome / Edge / Brave)
+1. Download or clone this repository
+2. Open `chrome://extensions` (or `edge://extensions`)
+3. Enable "Developer mode"
+4. Click "Load unpacked"
+5. Select the `extension/` folder
+
+## Tech stack
+
+- [Next.js 16](https://nextjs.org)
+- [Tailwind CSS](https://tailwindcss.com)
+- [Phosphor Icons](https://phosphoricons.com)
+- Deployed on [Vercel](https://vercel.com)
+
+## License
+
+MIT
