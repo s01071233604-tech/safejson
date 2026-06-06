@@ -53,6 +53,27 @@ Search "SafeJSON" in the Edge Add-ons store.
 - [Phosphor Icons](https://phosphoricons.com)
 - Deployed on [Vercel](https://vercel.com)
 
+## How SafeJSON compares to other JSON tools
+
+| Feature | SafeJSON | jsonformatter.org | codebeautify.org |
+|---------|----------|-------------------|------------------|
+| Client-side processing | Yes | No — server-side | No — server-side |
+| Data leaves your device | Never | Yes | Yes |
+| Open source | Yes (MIT) | No | No |
+| Ads | None | Yes | Yes |
+| Data breach history | None | 80K+ credentials leaked (Nov 2025) | Same breach |
+| JSON Diff | Yes (Pro) | No | No |
+| JWT Decoder | Yes (Pro) | No | No |
+| JSONPath | Yes (Pro) | No | No |
+| Schema Validator | Yes (Pro) | No | No |
+| Price | Free (core), $5/mo (Pro) | Free (ad-supported) | Free (ad-supported) |
+
+## Competitive context
+
+jsonformatter.org and codebeautify.org were found by security researchers at watchTowr (November 2025) to have leaked over 80,000 user credentials — including AWS keys, GitHub tokens, and banking details — through an unprotected "Recent Links" feature. The data was accessible without authentication, and attackers were confirmed to be actively scraping the data within 48 hours.
+
+SafeJSON was built in response: if all processing happens in the browser, there is nothing to leak.
+
 ## License
 
 MIT
