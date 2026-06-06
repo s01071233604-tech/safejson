@@ -2,6 +2,7 @@
 
 import { useState, useCallback, useMemo, useEffect } from "react";
 import JsonTreeView, { type JsonValue } from "./components/JsonTreeView";
+import Link from "next/link";
 import {
   ShieldCheck,
   Lightning,
@@ -167,12 +168,23 @@ export default function Home() {
       {/* Header */}
       <header className="border-b border-zinc-800">
         <div className="max-w-6xl mx-auto px-4 h-14 flex items-center justify-between">
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-6">
             <span className="text-lg font-bold tracking-tight">
               <span className="text-emerald-400">{`{`}</span>
               SafeJSON
               <span className="text-emerald-400">{`}`}</span>
             </span>
+            <nav className="flex items-center gap-1">
+              <span className="text-xs px-2 py-1 rounded bg-emerald-400/10 text-emerald-400 font-medium">
+                Formatter
+              </span>
+              <Link
+                href="/diff"
+                className="text-xs text-zinc-500 hover:text-zinc-300 px-2 py-1 rounded transition-colors"
+              >
+                Diff
+              </Link>
+            </nav>
           </div>
           <div className="flex items-center gap-4">
             <a
