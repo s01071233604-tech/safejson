@@ -91,16 +91,27 @@ export default function PricingPage() {
                 </li>
               ))}
             </ul>
-            <a
-              href="https://buy.stripe.com/PLACEHOLDER"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block w-full text-center py-3 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-black font-semibold text-sm transition-colors"
-            >
-              Get Pro
-            </a>
+            <div className="space-y-2">
+              <a
+                href="https://jsonlee.lemonsqueezy.com/checkout/buy/6a37f7c4-32a2-4390-8545-99864d388725"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full text-center py-3 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-black font-semibold text-sm transition-colors"
+              >
+                Get Pro Monthly — $5
+              </a>
+              <a
+                href="https://jsonlee.lemonsqueezy.com/checkout/buy/924b3488-c62c-4628-ad09-7ed793b081d9"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full text-center py-3 rounded-xl border border-zinc-700 hover:border-zinc-500 text-zinc-300 font-medium text-sm transition-colors"
+              >
+                Get Pro Yearly — $39
+              </a>
+            </div>
             <p className="text-xs text-zinc-600 text-center mt-3">
-              Cancel anytime. No questions asked.
+              Cancel anytime. No questions asked. Payment handled by Lemon
+              Squeezy.
             </p>
           </div>
         </div>
