@@ -259,18 +259,26 @@ export default function DiffPage() {
             Pro Feature
           </span>
           <h2 className="text-2xl font-bold mt-4 mb-2">
-            More tools for your workflow
+            Unlock all Pro tools
           </h2>
           <p className="text-sm text-zinc-500 max-w-md mx-auto mb-6">
             JSON Diff, JWT Decoder, JSONPath Query, and Schema Validator —
-            all client-side, all privacy-first. Coming soon.
+            $5/month. All client-side. Cancel anytime.
           </p>
-          <Link
-            href="/"
-            className="text-sm text-emerald-400 hover:underline"
-          >
-            Back to JSON Formatter →
-          </Link>
+          <div className="flex items-center justify-center gap-3">
+            <Link
+              href="/pricing"
+              className="px-5 py-2.5 bg-emerald-500 hover:bg-emerald-400 text-black font-semibold rounded-xl transition-colors text-sm"
+            >
+              View Pricing
+            </Link>
+            <Link
+              href="/"
+              className="text-sm text-zinc-500 hover:text-zinc-300 transition-colors"
+            >
+              Back to Formatter
+            </Link>
+          </div>
         </div>
       </section>
 

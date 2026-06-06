@@ -298,14 +298,11 @@ export default function JwtPage() {
         <h2 className="text-lg font-semibold mb-6 text-center text-zinc-400">
           How JWT works
         </h2>
-        <div className="grid grid-cols-3 gap-4 text-center">
+        <div className="grid grid-cols-3 gap-4 text-center mb-12">
           <div className="p-4 rounded-xl border border-red-400/10 bg-red-400/5">
             <p className="text-xs text-red-400 font-medium mb-1">HEADER</p>
             <p className="text-xs text-zinc-500 leading-relaxed">
-              Algorithm &amp; token type. Base64URL-encoded JSON. Typically{" "}
-              <code className="text-zinc-400">
-                {"{"}alg: "HS256"{"}"}
-              </code>
+              Algorithm &amp; token type. Base64URL-encoded JSON.
             </p>
           </div>
           <div className="p-4 rounded-xl border border-emerald-400/10 bg-emerald-400/5">
@@ -317,9 +314,36 @@ export default function JwtPage() {
           <div className="p-4 rounded-xl border border-zinc-700/50 bg-zinc-900/30">
             <p className="text-xs text-zinc-400 font-medium mb-1">SIGNATURE</p>
             <p className="text-xs text-zinc-500 leading-relaxed">
-              Verifies the token hasn&apos;t been tampered with. Requires the
-              secret key.
+              Verifies the token hasn&apos;t been tampered with.
             </p>
+          </div>
+        </div>
+
+        {/* Pro CTA */}
+        <div className="text-center">
+          <span className="text-xs font-medium text-emerald-400/80 uppercase tracking-wider bg-emerald-400/10 px-3 py-1 rounded-full">
+            Pro Feature
+          </span>
+          <h2 className="text-2xl font-bold mt-4 mb-2">
+            Keep your tokens safe
+          </h2>
+          <p className="text-sm text-zinc-500 max-w-md mx-auto mb-6">
+            JWT tokens contain sensitive data. SafeJSON Pro ensures your tokens
+            never leave your browser — $5/month, cancel anytime.
+          </p>
+          <div className="flex items-center justify-center gap-3">
+            <Link
+              href="/pricing"
+              className="px-5 py-2.5 bg-emerald-500 hover:bg-emerald-400 text-black font-semibold rounded-xl transition-colors text-sm"
+            >
+              View Pricing
+            </Link>
+            <Link
+              href="/"
+              className="text-sm text-zinc-500 hover:text-zinc-300 transition-colors"
+            >
+              Back to Formatter
+            </Link>
           </div>
         </div>
       </section>
