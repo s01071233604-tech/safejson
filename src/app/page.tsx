@@ -233,11 +233,11 @@ export default function Home() {
             The JSON tool that{" "}
             <span className="text-emerald-400">never sees your data</span>
           </h1>
-          <p className="text-lg text-zinc-400 max-w-2xl mx-auto mb-4">
+          <p className="text-lg text-zinc-400 max-w-2xl mx-auto mb-4 text-pretty">
             Format, validate, and debug JSON. Entirely in your browser. No
             server. No ads. No tracking.
           </p>
-          <p className="text-sm text-zinc-600 max-w-xl mx-auto">
+          <p className="text-sm text-zinc-600 max-w-xl mx-auto text-pretty">
             In November 2025, popular online JSON tools were caught leaking over
             80,000 credentials, including AWS keys, GitHub tokens, and bank
             details. SafeJSON runs 100% client-side.{" "}
@@ -433,7 +433,7 @@ export default function Home() {
                 className="text-emerald-400 mb-3"
               />
               <h3 className="font-semibold text-sm mb-2">{title}</h3>
-              <p className="text-xs text-zinc-500 leading-relaxed">{desc}</p>
+              <p className="text-xs text-zinc-500 leading-relaxed text-pretty">{desc}</p>
             </div>
           ))}
         </div>
@@ -514,7 +514,7 @@ export default function Home() {
                   <h3 className="font-semibold text-sm mb-0.5 group-hover:text-emerald-400 transition-colors">
                     {tool.title}
                   </h3>
-                  <p className="text-xs text-zinc-500">{tool.desc}</p>
+                  <p className="text-xs text-zinc-500 text-pretty">{tool.desc}</p>
                 </div>
                 <span className="text-zinc-600 group-hover:text-emerald-400 transition-colors text-sm">
                   →
