@@ -106,6 +106,12 @@ export default function DiffPage() {
               <span className="text-xs px-2 py-1 rounded bg-emerald-400/10 text-emerald-400 font-medium">
                 Diff
               </span>
+              <Link
+                href="/jwt"
+                className="text-xs text-zinc-500 hover:text-zinc-300 px-2 py-1 rounded transition-colors"
+              >
+                JWT
+              </Link>
             </nav>
           </div>
           <div className="flex items-center gap-4">
