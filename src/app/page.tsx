@@ -387,6 +387,19 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Quick links — high-authority internal linking */}
+      <section className="border-t border-zinc-800/50">
+        <div className="max-w-4xl mx-auto px-4 py-8">
+          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm">
+            <span className="text-zinc-600 text-xs">Explore:</span>
+            <Link href="/blog/safest-json-formatter" className="text-zinc-500 hover:text-emerald-400 transition-colors">What is the safest JSON formatter</Link>
+            <Link href="/vs/jsonformatter-org" className="text-zinc-500 hover:text-emerald-400 transition-colors">SafeJSON vs jsonformatter.org</Link>
+            <Link href="/vs/jsonformatter-extension" className="text-zinc-500 hover:text-emerald-400 transition-colors">Extension comparison</Link>
+            <Link href="/pricing" className="text-zinc-500 hover:text-emerald-400 transition-colors">Free vs Pro</Link>
+          </div>
+        </div>
+      </section>
+
       {/* Features */}
       <section className="border-t border-zinc-800/50 bg-zinc-900/30">
         <div className="max-w-4xl mx-auto px-4 py-20">

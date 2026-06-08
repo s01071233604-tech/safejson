@@ -105,6 +105,10 @@ export default function VsJsonFormatterPage() {
           </p>
         </section>
 
+        <div className="flex items-center justify-center gap-4 mb-6">
+          <Link href="/blog/safest-json-formatter" className="text-sm text-zinc-500 hover:text-emerald-400 transition-colors">Read: Safest JSON formatters compared</Link>
+          <Link href="/pricing" className="text-sm text-zinc-500 hover:text-emerald-400 transition-colors">SafeJSON Pro pricing</Link>
+        </div>
         <div className="text-center">
           <Link
             href="/"

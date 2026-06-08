@@ -168,7 +168,30 @@ export default function BlogPost() {
           post-sale JSON Formatter Chrome extension should also be avoided.
         </p>
 
-        <div className="text-center mt-12 pt-8 border-t border-zinc-800/50">
+        {/* Related content */}
+        <div className="mt-12 pt-8 border-t border-zinc-800/50">
+          <h3 className="text-sm font-semibold text-zinc-400 mb-4">Related articles and comparisons</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <Link href="/vs/jsonformatter-org" className="p-4 rounded-xl border border-zinc-800 hover:border-zinc-700 transition-colors group">
+              <p className="text-sm font-medium group-hover:text-emerald-400 transition-colors">SafeJSON vs jsonformatter.org</p>
+              <p className="text-xs text-zinc-500 mt-1">Full feature comparison and breach details.</p>
+            </Link>
+            <Link href="/vs/jsonformatter-extension" className="p-4 rounded-xl border border-zinc-800 hover:border-zinc-700 transition-colors group">
+              <p className="text-sm font-medium group-hover:text-emerald-400 transition-colors">SafeJSON vs JSON Formatter Extension</p>
+              <p className="text-xs text-zinc-500 mt-1">Why the 2M-user extension is no longer safe.</p>
+            </Link>
+            <Link href="/pricing" className="p-4 rounded-xl border border-zinc-800 hover:border-zinc-700 transition-colors group">
+              <p className="text-sm font-medium group-hover:text-emerald-400 transition-colors">SafeJSON Pro Pricing</p>
+              <p className="text-xs text-zinc-500 mt-1">Free core tools, Pro features for $5/month.</p>
+            </Link>
+            <Link href="/" className="p-4 rounded-xl border border-zinc-800 hover:border-zinc-700 transition-colors group">
+              <p className="text-sm font-medium group-hover:text-emerald-400 transition-colors">Try SafeJSON Formatter</p>
+              <p className="text-xs text-zinc-500 mt-1">Format your first JSON — zero data upload.</p>
+            </Link>
+          </div>
+        </div>
+
+        <div className="text-center mt-8">
           <Link
             href="/"
             className="inline-flex px-6 py-3 bg-emerald-500 hover:bg-emerald-400 text-black font-semibold rounded-xl transition-colors text-sm"
