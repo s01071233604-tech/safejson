@@ -1,21 +1,41 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { BreadcrumbSchema } from "../../components/StructuredData";
+import {
+  ComparisonTable,
+  RelatedComparisons,
+  VerificationTutorial,
+} from "../../components/ComparisonContent";
 
 export const metadata: Metadata = {
-  title: "SafeJSON vs codebeautify.org — Comparison 2026",
+  title: "SafeJSON vs codebeautify.org - Client-side JSON Tools 2026",
   description:
-    "SafeJSON processes everything client-side. codebeautify.org is server-side and was part of the 2025 credential leak affecting 80,000+ users. Compare features and privacy.",
+    "Compare SafeJSON and codebeautify.org on privacy, client-side JSON processing, the 2025 credential leak, ads, JSON Diff, JWT, JSONPath, Schema, and pricing.",
   openGraph: {
     title: "SafeJSON vs codebeautify.org",
     description:
-      "Compare SafeJSON and codebeautify.org on privacy, client-side processing, breach history, ads, and JSON tools.",
+      "SafeJSON processes JSON locally in your browser. Compare it with codebeautify.org.",
     url: "/vs/codebeautify",
   },
   alternates: {
     canonical: "/vs/codebeautify",
   },
 };
+
+const rows = [
+  ["Feature", "SafeJSON", "codebeautify.org"],
+  ["Processing", "Client-side. No data transmission during JSON work.", "Server-side workflow."],
+  ["Verifiable privacy", "Yes. Check DevTools -> Network.", "No clear zero-request verification path."],
+  ["Data breach history", "None.", "Part of the November 2025 80K+ credential exposure."],
+  ["Open source", "Yes. MIT license.", "No."],
+  ["Ads", "None.", "Heavy ad placements."],
+  ["JSON Diff", "Yes (Pro).", "No focused JSON Diff workflow."],
+  ["JWT Decoder", "Yes (Pro).", "Not a privacy-verifiable JWT workflow."],
+  ["JSONPath", "Yes (Pro).", "No."],
+  ["Schema Validator", "Yes (Pro).", "Limited."],
+  ["Large files", "50MB+ local handling.", "Limited by upload and browser/server workflow."],
+  ["Price", "Free core tools, $5/month Pro.", "Free with ads."],
+];
 
 export default function VsCodeBeautifyPage() {
   return (
@@ -30,54 +50,61 @@ export default function VsCodeBeautifyPage() {
         ]}
       />
       <header className="border-b border-zinc-800">
-        <div className="max-w-4xl mx-auto px-4 h-14 flex items-center">
+        <div className="max-w-4xl mx-auto px-4 h-14 flex items-center justify-between">
           <Link href="/" className="text-lg font-bold tracking-tight">
             <span className="text-emerald-400">{`{`}</span>SafeJSON
             <span className="text-emerald-400">{`}`}</span>
           </Link>
+          <Link
+            href="/compare"
+            className="text-sm text-zinc-500 transition-colors hover:text-zinc-300"
+          >
+            Compare all
+          </Link>
         </div>
       </header>
-      <main className="max-w-3xl mx-auto px-4 py-16">
+
+      <main className="max-w-4xl mx-auto px-4 py-16">
         <h1 className="text-3xl font-bold tracking-tight mb-4">
           SafeJSON vs codebeautify.org
         </h1>
         <p className="text-lg text-zinc-400 mb-8">
           codebeautify.org was part of the same November 2025 credential leak
-          that exposed 80,000+ user data entries. SafeJSON eliminates the risk
-          by processing everything client-side.
+          that exposed 80K+ snippets. SafeJSON removes that failure mode by
+          processing JSON locally in your browser.
         </p>
-        <div className="overflow-x-auto mb-12">
-          <table className="w-full text-sm">
-            <thead>
-              <tr className="border-b border-zinc-800">
-                <th className="text-left py-3 pr-4 text-zinc-400 font-medium w-1/3">Feature</th>
-                <th className="text-left py-3 pr-4 text-emerald-400 font-medium">SafeJSON</th>
-                <th className="text-left py-3 text-zinc-500 font-medium">codebeautify.org</th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-zinc-800/50">
-              {[
-                ["Processing", "Client-side. No data transmission.", "Server-side. Data sent to remote servers."],
-                ["Data breach history", "None.", "80,000+ credentials leaked (Nov 2025). Same breach as jsonformatter.org."],
-                ["Open source", "Yes. MIT license.", "No."],
-                ["Ads", "None.", "Heavy ad placements including misleading download buttons."],
-                ["Tools", "JSON Formatter, Diff, JWT, JSONPath, Schema.", "Multiple formatters (HTML, CSS, JS, JSON, SQL, XML)."],
-                ["JWT Decoder", "Yes (Pro). Client-side.", "Not available."],
-                ["JSON Diff", "Yes (Pro).", "Not available."],
-                ["Price", "Free (core). $5/month (Pro).", "Free (ad-supported)."],
-              ].map(([feature, safejson, competitor]) => (
-                <tr key={feature} className="hover:bg-white/[0.02]">
-                  <td className="py-3 pr-4 text-zinc-300 font-medium">{feature}</td>
-                  <td className="py-3 pr-4 text-zinc-400">{safejson}</td>
-                  <td className="py-3 text-zinc-500">{competitor}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+
+        <section className="mb-12">
+          <ComparisonTable rows={rows} />
+        </section>
+
+        <section className="mb-12">
+          <h2 className="text-xl font-semibold mb-4">
+            The codebeautify.org incident
+          </h2>
+          <p className="text-sm leading-relaxed text-zinc-400">
+            The reported 2025 exposure affected jsonformatter.org and
+            codebeautify.org. For developers pasting logs, API responses,
+            tokens, configs, or customer data, the problem is not only one
+            incident. The problem is any workflow where sensitive JSON leaves
+            the browser.
+          </p>
+        </section>
+
+        <section className="mb-12">
+          <VerificationTutorial />
+        </section>
+
+        <div className="mb-12 text-center">
+          <Link
+            href="/pricing"
+            className="inline-flex px-6 py-3 bg-emerald-500 hover:bg-emerald-400 text-black font-semibold rounded-xl transition-colors text-sm"
+          >
+            Get SafeJSON Pro
+          </Link>
         </div>
-        <div className="text-center">
-          <Link href="/" className="inline-flex px-6 py-3 bg-emerald-500 hover:bg-emerald-400 text-black font-semibold rounded-xl transition-colors text-sm">Try SafeJSON</Link>
-        </div>
+
+        <RelatedComparisons current="/vs/codebeautify" />
       </main>
     </div>
   );

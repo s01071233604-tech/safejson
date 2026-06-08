@@ -6,6 +6,8 @@ import {
   SoftwareAppSchema,
   FAQSchema,
 } from "./components/StructuredData";
+import LocalProcessingNote from "./components/LocalProcessingNote";
+import NetworkRequestIndicator from "./components/NetworkRequestIndicator";
 import Link from "next/link";
 import {
   ShieldCheck,
@@ -15,6 +17,7 @@ import {
   Heart,
   Plug,
 } from "@phosphor-icons/react";
+import { useJsonWorker } from "./hooks/useJsonWorker";
 
 type Tab = "tree" | "raw";
 
@@ -26,6 +29,11 @@ export default function Home() {
   const [parsed, setParsed] = useState<JsonValue | null>(null);
   const [formattedText, setFormattedText] = useState("");
   const [copied, setCopied] = useState(false);
+  const {
+    state: jsonWorker,
+    run: runJsonWorker,
+    reset: resetJsonWorker,
+  } = useJsonWorker();
 
   // Load JSON from ?json= URL parameter (sent by Chrome extension)
   useEffect(() => {
@@ -60,55 +68,44 @@ export default function Home() {
       setError(null);
       setParsed(null);
       setFormattedText("");
+      resetJsonWorker();
       return;
     }
-    try {
-      const data = JSON.parse(input);
-      setParsed(data);
-      setFormattedText(JSON.stringify(data, null, 2));
-      setError(null);
-    } catch (e) {
-      const msg = e instanceof Error ? e.message : String(e);
-      setError(msg);
-      setParsed(null);
-      setFormattedText("");
-
-      // Try to extract line/column from the error message
-      const match = msg.match(/at position (\d+)/);
-      if (match) {
-        const pos = parseInt(match[1], 10);
-        const lines = input.slice(0, pos).split("\n");
-        const line = lines.length;
-        const column = lines[lines.length - 1].length + 1;
-        setError(`Line ${line}, Column ${column}: ${msg}`);
-      }
-    }
-  }, [input]);
+    setError(null);
+    setParsed(null);
+    setFormattedText("");
+    runJsonWorker("format", input);
+  }, [input, resetJsonWorker, runJsonWorker]);
 
   const handleClear = useCallback(() => {
     setInput("");
     setError(null);
     setParsed(null);
     setFormattedText("");
-  }, []);
+    resetJsonWorker();
+  }, [resetJsonWorker]);
+
+  const currentError = jsonWorker.error || error;
+  const currentParsed = jsonWorker.result?.data ?? parsed;
+  const currentFormattedText = jsonWorker.result?.formatted || formattedText;
 
   const handleCopy = useCallback(async () => {
-    if (!formattedText) return;
-    await navigator.clipboard.writeText(formattedText);
+    if (!currentFormattedText) return;
+    await navigator.clipboard.writeText(currentFormattedText);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
-  }, [formattedText]);
+  }, [currentFormattedText]);
 
   const handleDownload = useCallback(() => {
-    if (!formattedText) return;
-    const blob = new Blob([formattedText], { type: "application/json" });
+    if (!currentFormattedText) return;
+    const blob = new Blob([currentFormattedText], { type: "application/json" });
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
     a.download = "formatted.json";
     a.click();
     URL.revokeObjectURL(url);
-  }, [formattedText]);
+  }, [currentFormattedText]);
 
   const handleSample = useCallback(() => {
     const sample = {
@@ -138,12 +135,13 @@ export default function Home() {
     setParsed(sample);
     setFormattedText(text);
     setError(null);
-  }, []);
+    resetJsonWorker();
+  }, [resetJsonWorker]);
 
   // Syntax-highlighted raw text output
   const highlightedRaw = useMemo(() => {
-    if (!formattedText) return "";
-    return formattedText
+    if (!currentFormattedText) return "";
+    return currentFormattedText
       .replace(/&/g, "&amp;")
       .replace(/</g, "&lt;")
       .replace(/>/g, "&gt;")
@@ -167,9 +165,10 @@ export default function Home() {
         /:\s*(null)/g,
         ': <span class="text-gray-500 italic">$1</span>'
       );
-  }, [formattedText]);
+  }, [currentFormattedText]);
 
-  const hasOutput = parsed !== null && !error;
+  const hasOutput =
+    currentParsed !== null && !currentError && !jsonWorker.processing;
 
   return (
     <div className="min-h-screen bg-zinc-950 text-zinc-100 font-sans">
@@ -236,18 +235,27 @@ export default function Home() {
           </div>
           <h1 className="text-4xl sm:text-5xl font-bold tracking-tight mb-4">
             <span className="block">The JSON tool</span>
-            <span className="text-emerald-400">that never sees your data</span>
+            <span className="text-emerald-400">
+              that never sees your data. Prove it yourself.
+            </span>
           </h1>
           <p className="text-lg text-zinc-400 max-w-2xl mx-auto mb-4 text-pretty">
             <span className="block">Format, validate, and debug JSON. Entirely in your browser.</span>
-            <span>No server. No ads. No tracking.</span>
+            <span>
+              Open DevTools -&gt; Network. You&apos;ll see zero requests.
+              That&apos;s the whole point.
+            </span>
+          </p>
+          <p className="text-sm font-medium text-zinc-500 max-w-2xl mx-auto mb-4 text-pretty">
+            Handles 50MB+ JSON files that crash VS Code. All in your browser.
+            No upload.
           </p>
           <p className="text-sm text-zinc-600 max-w-xl mx-auto text-pretty">
             In November 2025, popular online JSON tools were caught leaking over
             80,000 credentials, including AWS keys, GitHub tokens, and bank
             details. SafeJSON runs 100% client-side.{" "}
             <span className="text-zinc-500">
-              Open DevTools → Network, format once → zero new requests.
+              Open DevTools -&gt; Network, format once -&gt; zero new requests.
             </span>
           </p>
         </div>
@@ -277,6 +285,10 @@ export default function Home() {
                 </button>
               </div>
             </div>
+            <LocalProcessingNote
+              processing={jsonWorker.processing}
+              sizeBytes={jsonWorker.sizeBytes}
+            />
             <div className="relative">
               {/* Line-number gutter */}
               <div className="absolute left-0 top-0 bottom-0 w-10 border-r border-zinc-800/50 pointer-events-none" />
@@ -298,7 +310,7 @@ export default function Home() {
 
           {/* Output panel */}
           <div className="border border-zinc-800 rounded-xl overflow-hidden bg-zinc-900/50 flex flex-col">
-            <div className="flex items-center justify-between px-4 py-2 border-b border-zinc-800">
+            <div className="flex flex-wrap items-center justify-between gap-2 px-4 py-2 border-b border-zinc-800">
               <div className="flex items-center gap-1">
                 <button
                   onClick={() => setTab("tree")}
@@ -338,11 +350,19 @@ export default function Home() {
                     </button>
                   </>
                 )}
+                <NetworkRequestIndicator />
               </div>
             </div>
 
             <div className="flex-1 h-[420px] overflow-auto">
-              {error ? (
+              {jsonWorker.processing ? (
+                <div className="flex h-full items-center justify-center text-sm text-zinc-500">
+                  <div className="text-center">
+                    <p className="mb-3 text-3xl font-mono text-zinc-800">{`{ }`}</p>
+                    <p>Parsing locally in your browser...</p>
+                  </div>
+                </div>
+              ) : currentError ? (
                 <div className="p-4">
                   <div className="flex items-start gap-3 p-3 rounded-lg bg-red-400/10 border border-red-400/20">
                     <span className="text-red-400 shrink-0 mt-0.5">✕</span>
@@ -351,14 +371,14 @@ export default function Home() {
                         Invalid JSON
                       </p>
                       <p className="text-sm text-red-300/70 mt-1 font-mono">
-                        {error}
+                        {currentError}
                       </p>
                     </div>
                   </div>
                 </div>
               ) : hasOutput ? (
                 tab === "tree" ? (
-                  <JsonTreeView data={parsed} />
+                  <JsonTreeView data={currentParsed!} />
                 ) : (
                   <pre
                     className="p-4 text-sm font-mono text-zinc-300 whitespace-pre"
@@ -398,6 +418,7 @@ export default function Home() {
             <span className="text-zinc-600 text-xs">Explore:</span>
             <Link href="/blog/safest-json-formatter" className="text-zinc-500 hover:text-emerald-400 transition-colors">What is the safest JSON formatter</Link>
             <Link href="/answers" className="text-zinc-500 hover:text-emerald-400 transition-colors">SafeJSON answers</Link>
+            <Link href="/compare" className="text-zinc-500 hover:text-emerald-400 transition-colors">JSON formatter comparison</Link>
             <Link href="/vs/jsonformatter-org" className="text-zinc-500 hover:text-emerald-400 transition-colors">SafeJSON vs jsonformatter.org</Link>
             <Link href="/vs/jsonformatter-extension" className="text-zinc-500 hover:text-emerald-400 transition-colors">Extension comparison</Link>
             <Link href="/pricing" className="text-zinc-500 hover:text-emerald-400 transition-colors">Free vs Pro</Link>
@@ -413,8 +434,8 @@ export default function Home() {
           {[
             {
               Icon: ShieldCheck,
-              title: "Privacy First",
-              desc: "All processing happens in your browser. Your JSON is never uploaded to any server. Open DevTools while formatting and verify zero new requests.",
+              title: "Verify, don't trust",
+              desc: "We don't ask you to trust us. Open DevTools -> Network tab -> paste any JSON. Zero requests. Your data never left your browser. Formatter, diff, JWT decoder, and JSONPath work the same way.",
             },
             {
               Icon: Lightning,
@@ -434,7 +455,7 @@ export default function Home() {
             {
               Icon: Heart,
               title: "Free Forever",
-              desc: "Core formatting, validation, and tree view are always free. Advanced tools like JSON diff and JWT decoder coming as optional Pro features.",
+              desc: "Core formatting, validation, and tree view are always free. Advanced tools like JSON diff, JWT decoder, JSONPath, and Schema are optional Pro features.",
             },
             {
               Icon: Plug,
@@ -558,6 +579,7 @@ export default function Home() {
           <Link href="/about" className="hover:text-zinc-400 transition-colors">About</Link>
           <Link href="/support" className="hover:text-zinc-400 transition-colors">Help & FAQ</Link>
           <Link href="/answers" className="hover:text-zinc-400 transition-colors">Answers</Link>
+          <Link href="/compare" className="hover:text-zinc-400 transition-colors">Compare</Link>
           <Link href="/blog/safest-json-formatter" className="hover:text-zinc-400 transition-colors">Blog</Link>
           <Link href="/privacy" className="hover:text-zinc-400 transition-colors">Privacy</Link>
           <Link href="/pricing" className="hover:text-zinc-400 transition-colors">Pricing</Link>

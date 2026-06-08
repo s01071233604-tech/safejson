@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "JSONPath Query — Evaluate JSONPath Expressions Online | SafeJSON",
+  title: "JSONPath Query - Evaluate JSONPath Online | SafeJSON",
   description:
-    "Query JSON data with XPath-like expressions. Extract nested values, filter arrays, and slice data. All processing happens in your browser.",
+    "Query JSON data with JSONPath expressions. Extract nested values, filter arrays, and slice data locally in your browser.",
   openGraph: {
-    title: "JSONPath Query — SafeJSON",
+    title: "JSONPath Query - SafeJSON",
     description:
       "Query JSON data with JSONPath expressions. Client-side evaluation, no data upload.",
     url: "/jsonpath",

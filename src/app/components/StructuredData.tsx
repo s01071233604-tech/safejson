@@ -68,6 +68,71 @@ export function BreadcrumbSchema({
   );
 }
 
+export function ProductSchema() {
+  return (
+    <JsonLdScript
+      data={{
+        "@context": "https://schema.org",
+        "@type": "Product",
+        name: "SafeJSON Pro",
+        description:
+          "Privacy-first JSON developer tools including JSON Diff, JWT Decoder, JSONPath Query, Schema Validator, and large file support. All user data is processed client-side.",
+        brand: {
+          "@type": "Brand",
+          name: "SafeJSON",
+        },
+        category: "DeveloperApplication",
+        url: "https://safejson.vercel.app/pricing",
+        offers: [
+          {
+            "@type": "Offer",
+            name: "SafeJSON Pro Monthly",
+            price: "5",
+            priceCurrency: "USD",
+            availability: "https://schema.org/InStock",
+            url: "https://safejson.vercel.app/pricing",
+          },
+          {
+            "@type": "Offer",
+            name: "SafeJSON Pro Yearly",
+            price: "39",
+            priceCurrency: "USD",
+            availability: "https://schema.org/InStock",
+            url: "https://safejson.vercel.app/pricing",
+          },
+        ],
+      }}
+    />
+  );
+}
+
+export function HowToSchema({
+  name,
+  description,
+  steps,
+}: {
+  name: string;
+  description: string;
+  steps: string[];
+}) {
+  return (
+    <JsonLdScript
+      data={{
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        name,
+        description,
+        step: steps.map((text, index) => ({
+          "@type": "HowToStep",
+          position: index + 1,
+          name: `Step ${index + 1}`,
+          text,
+        })),
+      }}
+    />
+  );
+}
+
 export function SoftwareAppSchema() {
   const ld = {
     "@context": "https://schema.org",

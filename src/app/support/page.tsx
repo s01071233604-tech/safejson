@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { HowToSchema } from "../components/StructuredData";
 
 export const metadata: Metadata = {
   title: "JSON Formatter Help & FAQ — SafeJSON Support",
@@ -223,6 +224,17 @@ export default function SupportPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(faqSchema).replace(/</g, "\\u003c"),
         }}
+      />
+      <HowToSchema
+        name="How to verify SafeJSON does not upload JSON data"
+        description="Use DevTools Network tab to confirm SafeJSON processes pasted JSON locally in the browser."
+        steps={[
+          "Open SafeJSON in your browser.",
+          "Open DevTools with F12 or Inspect.",
+          "Switch to the Network tab.",
+          "Paste JSON into SafeJSON and run the formatter or another tool.",
+          "Confirm there are zero new network requests while your JSON is processed.",
+        ]}
       />
     </div>
   );

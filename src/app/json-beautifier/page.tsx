@@ -1,30 +1,40 @@
 "use client";
 
-import { useState, useCallback, useMemo } from "react";
+import { useState, useCallback } from "react";
 import Link from "next/link";
+import LocalProcessingNote from "../components/LocalProcessingNote";
+import { useJsonWorker } from "../hooks/useJsonWorker";
 
 const SAMPLE = '{"store":{"name":"Acme Books","books":[{"id":1,"title":"The Pragmatic Programmer","price":49.99,"inStock":true},{"id":2,"title":"Clean Code","price":39.99,"inStock":true}]}}';
 
 export default function JsonBeautifierPage() {
   const [input, setInput] = useState("");
   const [copied, setCopied] = useState(false);
+  const {
+    state: jsonWorker,
+    run: runJsonWorker,
+    reset: resetJsonWorker,
+  } = useJsonWorker();
 
-  const { output, error } = useMemo(() => {
-    if (!input.trim()) return { output: "", error: null };
-
-    try {
-      return { output: JSON.stringify(JSON.parse(input), null, 2), error: null };
-    } catch (e) {
-      return {
-        output: "",
-        error: e instanceof Error ? e.message : "Invalid JSON",
-      };
-    }
-  }, [input]);
+  const output = jsonWorker.result?.formatted || "";
+  const error = jsonWorker.error;
 
   const handleSample = useCallback(() => {
     setInput(SAMPLE);
-  }, []);
+    runJsonWorker("format", SAMPLE);
+  }, [runJsonWorker]);
+
+  const handleInputChange = useCallback(
+    (value: string) => {
+      setInput(value);
+      if (!value.trim()) {
+        resetJsonWorker();
+        return;
+      }
+      runJsonWorker("format", value);
+    },
+    [resetJsonWorker, runJsonWorker]
+  );
 
   const handleCopy = useCallback(async () => {
     if (!output) return;
@@ -59,7 +69,11 @@ export default function JsonBeautifierPage() {
               <span className="text-xs font-medium text-zinc-500 uppercase tracking-wider">Minified JSON</span>
               <button onClick={handleSample} className="text-xs text-zinc-500 hover:text-zinc-300 transition-colors">Sample</button>
             </div>
-            <textarea value={input} onChange={(e) => setInput(e.target.value)} placeholder='{"name":"SafeJSON","version":"1.0"}' spellCheck={false} className="w-full h-[360px] bg-transparent text-sm font-mono p-4 text-zinc-300 placeholder:text-zinc-600 focus:outline-none resize-none" />
+            <LocalProcessingNote
+              processing={jsonWorker.processing}
+              sizeBytes={jsonWorker.sizeBytes}
+            />
+            <textarea value={input} onChange={(e) => handleInputChange(e.target.value)} placeholder='{"name":"SafeJSON","version":"1.0"}' spellCheck={false} className="w-full h-[360px] bg-transparent text-sm font-mono p-4 text-zinc-300 placeholder:text-zinc-600 focus:outline-none resize-none" />
           </div>
           <div className="border border-zinc-800 rounded-xl overflow-hidden bg-zinc-900/50 flex flex-col">
             <div className="flex items-center justify-between px-4 py-2 border-b border-zinc-800">
@@ -67,10 +81,15 @@ export default function JsonBeautifierPage() {
               {output && <button onClick={handleCopy} className="text-xs text-zinc-500 hover:text-zinc-300 transition-colors">{copied ? "Copied!" : "Copy"}</button>}
             </div>
             <div className="flex-1 min-h-[360px] overflow-auto">
-              {error ? (
+              {jsonWorker.processing ? (
+                <div className="flex h-full items-center justify-center text-zinc-600 text-sm"><p>Parsing locally in your browser...</p></div>
+              ) : error ? (
                 <div className="p-4"><div className="flex items-start gap-3 p-3 rounded-lg bg-red-400/10 border border-red-400/20"><span className="text-red-400 shrink-0">!</span><p className="text-sm text-red-300/80 font-mono">{error}</p></div></div>
               ) : output ? (
-                <pre className="p-4 text-sm font-mono text-emerald-400 whitespace-pre-wrap break-words">{highlight(output)}</pre>
+                <pre
+                  className="p-4 text-sm font-mono text-emerald-400 whitespace-pre-wrap break-words"
+                  dangerouslySetInnerHTML={{ __html: highlight(output) }}
+                />
               ) : (
                 <div className="flex items-center justify-center h-full text-zinc-600 text-sm"><p>Paste minified JSON to beautify it</p></div>
               )}

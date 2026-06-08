@@ -71,7 +71,7 @@ export function ProBanner({ tool }: { tool: string }) {
           href="/pricing"
           className="text-xs font-medium text-emerald-400 hover:text-emerald-300 transition-colors"
         >
-          Get Pro — $5/mo
+          Get Pro - $5/mo
         </Link>
         <button
           onClick={() => setDismissed(true)}

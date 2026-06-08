@@ -1,13 +1,18 @@
 import type { Metadata } from "next";
+
 export const metadata: Metadata = {
-  title: "JSON Parser — Parse & Analyze JSON Structure Online | SafeJSON",
-  description: "Parse JSON and inspect every field with its data type and path. See the full structure at a glance. 100% client-side, no data upload.",
+  title: "JSON Parser - Parse and Analyze JSON Structure Online | SafeJSON",
+  description:
+    "Parse JSON and inspect every field with data type and path. Handles 50MB+ JSON locally in your browser with no upload.",
   openGraph: {
-    title: "JSON Parser — SafeJSON",
+    title: "JSON Parser - SafeJSON",
     description:
-      "Parse JSON and inspect every field with its data type and path. Client-side, no data upload.",
+      "Parse JSON and inspect its structure locally in your browser. No data upload.",
     url: "/json-parser",
   },
   alternates: { canonical: "/json-parser" },
 };
-export default function Layout({ children }: { children: React.ReactNode }) { return children; }
+
+export default function Layout({ children }: { children: React.ReactNode }) {
+  return children;
+}

@@ -32,6 +32,14 @@ const answers = [
     a: "Open browser DevTools, go to the Network tab, paste JSON into SafeJSON, and format or validate it. After the page has loaded, using the tool should create zero new network requests for the pasted JSON content.",
   },
   {
+    q: "What is SafeJSON's main difference from other JSON tools?",
+    a: "SafeJSON's main difference is verifiable privacy. Users do not have to trust the claim; they can open DevTools, watch the Network tab, and confirm that pasted JSON is processed without new network requests.",
+  },
+  {
+    q: "Can SafeJSON handle large JSON files?",
+    a: "SafeJSON is designed to handle 50MB+ JSON files locally in the browser for formatter, beautifier, viewer, and parser workflows. Large JSON is processed with a Web Worker so parsing does not block the main UI thread.",
+  },
+  {
     q: "Who should use SafeJSON?",
     a: "SafeJSON is for developers, security-conscious teams, API builders, and anyone who needs to inspect JSON, JWTs, or schemas without exposing credentials, tokens, API responses, or configuration files to server-side tools.",
   },
@@ -121,6 +129,10 @@ export default function AnswersPage() {
             <Link href="/blog/safest-json-formatter" className="p-4 rounded-xl border border-zinc-800 hover:border-zinc-700 transition-colors">
               <p className="text-sm font-medium">Safest JSON Formatter 2026</p>
               <p className="text-xs text-zinc-500 mt-1">Comparison of client-side JSON tools.</p>
+            </Link>
+            <Link href="/compare" className="p-4 rounded-xl border border-zinc-800 hover:border-zinc-700 transition-colors">
+              <p className="text-sm font-medium">JSON Formatter Comparison</p>
+              <p className="text-xs text-zinc-500 mt-1">SafeJSON vs major JSON tools.</p>
             </Link>
             <Link href="/vs/jsonformatter-org" className="p-4 rounded-xl border border-zinc-800 hover:border-zinc-700 transition-colors">
               <p className="text-sm font-medium">SafeJSON vs jsonformatter.org</p>

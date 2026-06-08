@@ -14,9 +14,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "SafeJSON — Privacy-first JSON formatter",
+  title: "SafeJSON - JSON Formatter You Can Verify",
   description:
-    "Format, validate, and debug JSON entirely in your browser. No server. No ads. No tracking. Your data never leaves your computer.",
+    "Format, validate, and debug JSON entirely in your browser. Open DevTools -> Network and verify zero new requests while your data is processed locally.",
   keywords: [
     "JSON formatter",
     "JSON validator",
@@ -25,19 +25,20 @@ export const metadata: Metadata = {
     "format JSON online",
     "JSON parser",
     "privacy",
+    "client-side JSON formatter",
   ],
   openGraph: {
-    title: "SafeJSON — The JSON tool that never sees your data",
+    title: "SafeJSON - The JSON tool that never sees your data",
     description:
-      "Format, validate, and debug JSON entirely in your browser. No server uploads. Open source.",
+      "Format, validate, and debug JSON entirely in your browser. Prove it yourself with DevTools Network.",
     type: "website",
     url: "/",
   },
   twitter: {
     card: "summary_large_image",
-    title: "SafeJSON — The JSON tool that never sees your data",
+    title: "SafeJSON - The JSON tool that never sees your data",
     description:
-      "Format, validate, and debug JSON entirely in your browser. No server uploads. Open source.",
+      "Format, validate, and debug JSON entirely in your browser. Prove it yourself with DevTools Network.",
   },
   metadataBase: new URL("https://safejson.vercel.app"),
   alternates: {
