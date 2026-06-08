@@ -549,6 +549,13 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="border-t border-zinc-800 py-8 text-center text-xs text-zinc-600">
+        <div className="flex items-center justify-center gap-4 mb-3">
+          <Link href="/about" className="hover:text-zinc-400 transition-colors">About</Link>
+          <Link href="/support" className="hover:text-zinc-400 transition-colors">Help & FAQ</Link>
+          <Link href="/blog/safest-json-formatter" className="hover:text-zinc-400 transition-colors">Blog</Link>
+          <Link href="/privacy" className="hover:text-zinc-400 transition-colors">Privacy</Link>
+          <Link href="/pricing" className="hover:text-zinc-400 transition-colors">Pricing</Link>
+        </div>
         <p>
           SafeJSON. All processing happens in your browser. We never see your
           data.

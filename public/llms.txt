@@ -55,6 +55,18 @@ The original extension (2M+ users) was sold, closed-sourced, and turned into adw
 https://safejson.vercel.app/blog/safest-json-formatter
 Comparison of 5 client-side JSON formatters. Covers the jsonformatter.org breach, how to verify a tool is safe, and what to avoid.
 
+## Support
+
+### Help & FAQ
+https://safejson.vercel.app/support
+Step-by-step guides for every SafeJSON feature. Covers formatting, verification, diff, JWT, JSONPath, Schema, offline use, and the jsonformatter.org breach.
+
+## About
+
+### About SafeJSON
+https://safejson.vercel.app/about
+Mission, origin story, technology, and team. Built by an independent developer. Open source, self-funded, no tracking.
+
 ## Key Facts
 - 100% client-side JSON processing
 - Zero data collection, zero tracking, zero ads
