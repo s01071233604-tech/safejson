@@ -54,9 +54,11 @@ export default function PrivacyPage() {
         <section className="mb-8">
           <h2 className="text-lg font-semibold mb-3">Third Parties</h2>
           <p className="text-zinc-400 leading-relaxed">
-            SafeJSON does not use any third-party analytics, tracking scripts,
-            advertising networks, or data brokers. There are no cookies set by
-            SafeJSON.
+            SafeJSON uses Google Analytics to measure anonymous page views
+            (through a privacy-safe implementation with IP anonymization). No
+            personal data or JSON content is ever sent to third parties. We do
+            not use advertising networks, tracking scripts, or data brokers.
+            There are no marketing cookies.
           </p>
         </section>
 

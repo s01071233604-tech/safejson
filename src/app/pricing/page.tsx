@@ -106,8 +106,8 @@ export default function PricingPage() {
                 "Everything in Free",
                 "JSON Diff Checker",
                 "JWT Decoder",
-                "JSONPath Query (coming soon)",
-                "Schema Validator (coming soon)",
+                "JSONPath Query",
+                "Schema Validator",
                 "Priority support",
               ].map((f) => (
                 <li key={f} className="flex items-start gap-2 text-sm text-zinc-300">
@@ -135,8 +135,8 @@ export default function PricingPage() {
               </a>
             </div>
             <p className="text-xs text-zinc-600 text-center mt-3">
-              Cancel anytime. No questions asked. Payment handled by Lemon
-              Squeezy.
+              Cancel anytime. No questions asked. Payment handled securely by
+              Lemon Squeezy.
             </p>
           </div>
         </div>
@@ -144,7 +144,7 @@ export default function PricingPage() {
         <div className="mt-16 text-center">
           <p className="text-xs text-zinc-600 max-w-md mx-auto leading-relaxed">
             All tools run entirely in your browser. We never see your data.
-            Payment is handled securely by Stripe — we never see your payment
+            Payment is handled securely by Lemon Squeezy — we never see your payment
             details either.
           </p>
         </div>

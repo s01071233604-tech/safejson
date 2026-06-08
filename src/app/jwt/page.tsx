@@ -154,9 +154,9 @@ export default function JwtPage() {
               >
                 Diff
               </Link>
-              <span className="text-xs px-2 py-1 rounded bg-emerald-400/10 text-emerald-400 font-medium">
-                JWT
-              </span>
+              <span className="text-xs px-2 py-1 rounded bg-emerald-400/10 text-emerald-400 font-medium">JWT</span>
+              <Link href="/jsonpath" className="text-xs text-zinc-500 hover:text-zinc-300 px-2 py-1 rounded transition-colors">JSONPath</Link>
+              <Link href="/schema" className="text-xs text-zinc-500 hover:text-zinc-300 px-2 py-1 rounded transition-colors">Schema</Link>
             </nav>
           </div>
           <div className="flex items-center gap-4">

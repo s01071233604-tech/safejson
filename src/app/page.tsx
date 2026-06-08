@@ -188,12 +188,9 @@ export default function Home() {
               >
                 Diff
               </Link>
-              <Link
-                href="/jwt"
-                className="text-xs text-zinc-500 hover:text-zinc-300 px-2 py-1 rounded transition-colors"
-              >
-                JWT
-              </Link>
+              <Link href="/jwt" className="text-xs text-zinc-500 hover:text-zinc-300 px-2 py-1 rounded transition-colors">JWT</Link>
+              <Link href="/jsonpath" className="text-xs text-zinc-500 hover:text-zinc-300 px-2 py-1 rounded transition-colors">JSONPath</Link>
+              <Link href="/schema" className="text-xs text-zinc-500 hover:text-zinc-300 px-2 py-1 rounded transition-colors">Schema</Link>
             </nav>
           </div>
           <div className="flex items-center gap-4">
@@ -423,8 +420,8 @@ export default function Home() {
             },
             {
               Icon: Plug,
-              title: "Chrome Extension Soon",
-              desc: "Auto-detect and format JSON responses directly in your browser. No copy-paste needed.",
+              title: "Browser Extension",
+              desc: "Auto-detect and format JSON responses on any URL. Available on Edge Add-ons. No tracking, no data collection.",
             },
           ].map(({ Icon, title, desc }) => (
             <div
