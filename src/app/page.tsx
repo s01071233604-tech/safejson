@@ -243,7 +243,7 @@ export default function Home() {
             80,000 credentials, including AWS keys, GitHub tokens, and bank
             details. SafeJSON runs 100% client-side.{" "}
             <span className="text-zinc-500">
-              Format with DevTools → Network open → you{"'"}ll see zero new requests.
+              Open DevTools → Network, format once → zero new requests.
             </span>
           </p>
         </div>

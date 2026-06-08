@@ -18,6 +18,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${siteUrl}/vs/codebeautify`, lastModified, changeFrequency: "monthly", priority: 0.6 },
     { url: `${siteUrl}/support`, lastModified, changeFrequency: "monthly", priority: 0.5 },
     { url: `${siteUrl}/about`, lastModified, changeFrequency: "yearly", priority: 0.4 },
+    { url: `${siteUrl}/json-viewer`, lastModified, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${siteUrl}/json-beautifier`, lastModified, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${siteUrl}/json-parser`, lastModified, changeFrequency: "monthly", priority: 0.8 },
     { url: `${siteUrl}/privacy`, lastModified, changeFrequency: "yearly", priority: 0.3 },
   ];
 }

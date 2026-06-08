@@ -3,12 +3,15 @@
 
 ## Core Tools
 
-- [JSON Formatter & Validator](https://safejson.vercel.app/): Paste JSON, get instant formatting with tree view, syntax highlighting, and error detection. 100% client-side.
-- [JSON Diff Checker](https://safejson.vercel.app/diff): Compare two JSON objects side by side with color-coded changes. All processing in-browser.
+- [JSON Formatter](https://safejson.vercel.app/): Format and validate JSON with tree view, syntax highlighting, and error detection. 100% client-side.
+- [JSON Beautifier](https://safejson.vercel.app/json-beautifier): Beautify minified JSON instantly. Paste compressed JSON, get clean indented output.
+- [JSON Viewer](https://safejson.vercel.app/json-viewer): Explore JSON data with a collapsible tree view. See structure at a glance.
+- [JSON Parser](https://safejson.vercel.app/json-parser): Parse JSON and inspect every field with data type and path.
+- [JSON Diff Checker](https://safejson.vercel.app/diff): Compare two JSON objects side by side with color-coded changes.
 - [JWT Decoder](https://safejson.vercel.app/jwt): Decode JWT tokens instantly — your token never leaves your device.
-- [JSONPath Query](https://safejson.vercel.app/jsonpath): Query JSON with XPath-like expressions. Client-side evaluation.
-- [JSON Schema Validator](https://safejson.vercel.app/schema): Validate JSON against JSON Schema. All client-side.
-- [Pricing](https://safejson.vercel.app/pricing): Free core formatting. Pro tools (Diff, JWT, JSONPath, Schema) for $5/month or $39/year.
+- [JSONPath Query](https://safejson.vercel.app/jsonpath): Query JSON with XPath-like expressions.
+- [JSON Schema Validator](https://safejson.vercel.app/schema): Validate JSON against JSON Schema.
+- [Pricing](https://safejson.vercel.app/pricing): Free core formatting. Pro tools for $5/month or $39/year.
 
 ## Pages
 
