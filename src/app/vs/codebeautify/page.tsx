@@ -42,10 +42,10 @@ export default function VsCodeBeautifyPage() {
     <div className="min-h-screen bg-zinc-950 text-zinc-100 font-sans">
       <BreadcrumbSchema
         items={[
-          { name: "SafeJSON", url: "https://safejson.vercel.app" },
+          { name: "SafeJSON", url: "https://safejson.dev" },
           {
             name: "SafeJSON vs codebeautify.org",
-            url: "https://safejson.vercel.app/vs/codebeautify",
+            url: "https://safejson.dev/vs/codebeautify",
           },
         ]}
       />

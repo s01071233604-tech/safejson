@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const siteUrl = "https://safejson.vercel.app";
+const siteUrl = "https://safejson.dev";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();

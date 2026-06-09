@@ -6,8 +6,8 @@ export default function PricingPage() {
     <div className="min-h-screen bg-zinc-950 text-zinc-100 font-sans">
       <BreadcrumbSchema
         items={[
-          { name: "SafeJSON", url: "https://safejson.vercel.app" },
-          { name: "Pricing", url: "https://safejson.vercel.app/pricing" },
+          { name: "SafeJSON", url: "https://safejson.dev" },
+          { name: "Pricing", url: "https://safejson.dev/pricing" },
         ]}
       />
       <ProductSchema />

@@ -24,7 +24,7 @@
     "type": "git",
     "url": "https://github.com/s01071233604-tech/safejson"
   },
-  "homepage": "https://safejson.vercel.app",
+  "homepage": "https://safejson.dev",
   "engines": {
     "node": ">=14"
   }

@@ -18,8 +18,8 @@ export function OrganizationSchema() {
         "@context": "https://schema.org",
         "@type": "Organization",
         name: "SafeJSON",
-        url: "https://safejson.vercel.app",
-        logo: "https://safejson.vercel.app/favicon.ico",
+        url: "https://safejson.dev",
+        logo: "https://safejson.dev/favicon.ico",
         sameAs: ["https://github.com/s01071233604-tech/safejson"],
       }}
     />
@@ -33,14 +33,14 @@ export function WebSiteSchema() {
         "@context": "https://schema.org",
         "@type": "WebSite",
         name: "SafeJSON",
-        url: "https://safejson.vercel.app",
+        url: "https://safejson.dev",
         description:
           "Privacy-first JSON formatter and developer tools that process data entirely in the browser.",
         inLanguage: "en",
         publisher: {
           "@type": "Organization",
           name: "SafeJSON",
-          url: "https://safejson.vercel.app",
+          url: "https://safejson.dev",
         },
       }}
     />
@@ -82,7 +82,7 @@ export function ProductSchema() {
           name: "SafeJSON",
         },
         category: "DeveloperApplication",
-        url: "https://safejson.vercel.app/pricing",
+        url: "https://safejson.dev/pricing",
         offers: [
           {
             "@type": "Offer",
@@ -90,7 +90,7 @@ export function ProductSchema() {
             price: "5",
             priceCurrency: "USD",
             availability: "https://schema.org/InStock",
-            url: "https://safejson.vercel.app/pricing",
+            url: "https://safejson.dev/pricing",
           },
           {
             "@type": "Offer",
@@ -98,7 +98,7 @@ export function ProductSchema() {
             price: "39",
             priceCurrency: "USD",
             availability: "https://schema.org/InStock",
-            url: "https://safejson.vercel.app/pricing",
+            url: "https://safejson.dev/pricing",
           },
         ],
       }}
@@ -163,10 +163,10 @@ export function SoftwareAppSchema() {
     author: {
       "@type": "Organization",
       name: "SafeJSON",
-      url: "https://safejson.vercel.app",
+      url: "https://safejson.dev",
       sameAs: ["https://github.com/s01071233604-tech/safejson"],
     },
-    url: "https://safejson.vercel.app",
+    url: "https://safejson.dev",
   };
 
   return <JsonLdScript data={ld} />;

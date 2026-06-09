@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 
 // safejson-cli — Open SafeJSON from your terminal
-// https://safejson.vercel.app
+// https://safejson.dev
 
-const url = "https://safejson.vercel.app";
+const url = "https://safejson.dev";
 
 // Accept optional JSON input via stdin
 let input = "";

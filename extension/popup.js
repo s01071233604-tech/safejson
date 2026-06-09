@@ -1,7 +1,7 @@
 // SafeJSON Popup
 
 document.getElementById("open-tool").addEventListener("click", () => {
-  chrome.tabs.create({ url: "https://safejson.vercel.app" });
+  chrome.tabs.create({ url: "https://safejson.dev" });
 });
 
 // Check current tab status via content script messaging
