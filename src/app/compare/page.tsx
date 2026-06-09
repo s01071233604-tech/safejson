@@ -5,6 +5,7 @@ import {
   HowToSchema,
   JsonLdScript,
 } from "../components/StructuredData";
+import Footer from "../components/Footer";
 import {
   ComparisonTable,
   RelatedComparisons,
@@ -162,6 +163,7 @@ export default function ComparePage() {
 
         <RelatedComparisons current="/compare" />
       </main>
+      <Footer />
     </div>
   );
 }
