@@ -57,9 +57,11 @@ SafeJSON = 可验证的隐私 JSON 工具箱。不是"trust us"，是"prove it y
 - Google 交叉验证作者身份: Person Schema + sameAs (LinkedIn/GitHub) 必需
 - About 页面必须有真实姓名+照片(非AI生成)+可外部验证凭证
 
-### 下一个会话继续
-1. About 页 Person Schema + sameAs (LinkedIn/GitHub)
-2. 博客作者署名改为真实姓名 (非 Organization)
-3. 内链双向审计: 支柱页↔子页, 对比页互链, 锚文本优化
-4. 博客内容日历: 每月2篇, 每季度刷新竞品页
-5. 其余页面接入共享 Footer 组件
+### 下一个会话继续 (2026-06-09 session ended)
+P0 全部完成。P1 进行中：
+- ✅ Footer 结构化分组（全部 16 页）
+- ✅ SPEC V2 重写（March 2026 Core Update 研究）
+- ✅ /compare 支柱页（FAQ+HowTo+Breadcrumb Schema）
+- ✅ About 页 Person Schema + sameAs（GitHub）
+- ✅ 博客作者改为 Person + sameAs
+- 待做: 内链双向审计, 博客内容日历, 博客从列表式改为教程式
