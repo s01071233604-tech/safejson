@@ -19,6 +19,20 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-zinc-950 text-zinc-100 font-sans">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Person",
+            name: "SafeJSON Developer",
+            url: "https://www.safejson.dev/about",
+            sameAs: ["https://github.com/s01071233604"],
+            knowsAbout: ["JSON", "Web Security", "Privacy", "Developer Tools", "Client-Side Processing"],
+            description: "Solo developer building privacy-first developer tools.",
+          }).replace(/</g, "\\u003c"),
+        }}
+      />
       <header className="border-b border-zinc-800">
         <div className="max-w-3xl mx-auto px-4 h-14 flex items-center">
           <Link href="/" className="text-lg font-bold tracking-tight">

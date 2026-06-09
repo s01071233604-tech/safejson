@@ -30,9 +30,10 @@ export default function BlogPost() {
     datePublished: "2026-06-08",
     dateModified: "2026-06-08",
     author: {
-      "@type": "Organization",
-      name: "SafeJSON",
-      url: "https://www.safejson.dev",
+      "@type": "Person",
+      name: "SafeJSON Developer",
+      url: "https://github.com/s01071233604",
+      sameAs: ["https://github.com/s01071233604"],
     },
     publisher: {
       "@type": "Organization",
