@@ -8,6 +8,8 @@ In November 2025, popular online JSON tools were caught leaking over 80,000 cred
 
 SafeJSON is different: **all processing happens in your browser. Zero network requests.**
 
+[![Product Hunt](https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1166144&theme=dark)](https://www.producthunt.com/products/safejson-privacy?embed=true&utm_source=badge-featured&utm_medium=badge)
+
 ## Features
 
 ### Web Tool ([safejson.dev](https://www.safejson.dev))

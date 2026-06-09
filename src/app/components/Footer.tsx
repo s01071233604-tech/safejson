@@ -30,6 +30,7 @@ export default function Footer() {
           <Link href="/blog/safest-json-formatter" className="hover:text-zinc-400 transition-colors">Blog</Link>
           <Link href="/privacy" className="hover:text-zinc-400 transition-colors">Privacy</Link>
           <Link href="/pricing" className="hover:text-zinc-400 transition-colors">Pricing</Link>
+          <Link href="https://www.producthunt.com/products/safejson-privacy" className="hover:text-zinc-400 transition-colors">Product Hunt</Link>
         </div>
       </div>
       <p className="mt-4">SafeJSON. All processing happens in your browser. We never see your data.</p>
