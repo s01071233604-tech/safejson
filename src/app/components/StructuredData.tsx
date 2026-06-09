@@ -139,6 +139,7 @@ export function SoftwareAppSchema() {
     "@type": "SoftwareApplication",
     name: "SafeJSON",
     applicationCategory: "DeveloperApplication",
+    image: "https://www.safejson.dev/favicon.ico",
     description:
       "Privacy-first JSON formatter that runs 100% in your browser. No data ever leaves your device. Zero network requests during formatting.",
     operatingSystem: "All",
