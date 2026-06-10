@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { BreadcrumbSchema, SoftwareAppSchema } from "../components/StructuredData";
+import { BreadcrumbSchema } from "../components/StructuredData";
 import Footer from "../components/Footer";
 
 export default function PricingPage() {
@@ -11,7 +11,6 @@ export default function PricingPage() {
           { name: "Pricing", url: "https://safejson.dev/pricing" },
         ]}
       />
-      <SoftwareAppSchema />
       <header className="border-b border-zinc-800">
         <div className="max-w-4xl mx-auto px-4 h-14 flex items-center">
           <Link
