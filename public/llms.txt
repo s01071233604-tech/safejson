@@ -31,6 +31,10 @@
 
 - [Safest JSON Formatter 2026](https://www.safejson.dev/blog/safest-json-formatter): 5 client-side tools compared. Covers the breach and how to verify safety.
 
+## Blog
+
+- [Is It Safe to Paste JSON Online?](https://safejson.dev/blog/is-it-safe-to-paste-json-online): Server-side vs client-side JSON tools, the 30-second safety test, and the jsonformatter.org breach.
+
 ## Key Facts
 
 - Differentiation: verifiable privacy, not trust-based privacy
