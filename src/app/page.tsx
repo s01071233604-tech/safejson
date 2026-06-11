@@ -2,7 +2,7 @@
 
 import { useState, useCallback, useMemo, useEffect } from "react";
 import JsonTreeView, { type JsonValue } from "./components/JsonTreeView";
-import { FAQSchema } from "./components/StructuredData";
+import { FAQSchema, SoftwareAppSchema } from "./components/StructuredData";
 import LocalProcessingNote from "./components/LocalProcessingNote";
 import NetworkRequestIndicator from "./components/NetworkRequestIndicator";
 import Footer from "./components/Footer";
@@ -551,6 +551,11 @@ export default function Home() {
                 desc: "Query JSON with XPath-like expressions. Extract nested values and filter arrays.",
                 href: "/jsonpath",
               },
+              {
+                title: "Schema Validator",
+                desc: "Validate JSON against JSON Schema locally. Catch missing fields, wrong types, and malformed payloads.",
+                href: "/schema",
+              },
             ].map((tool) => (
               <Link
                 key={tool.href}
@@ -582,6 +587,7 @@ export default function Home() {
 
       <Footer />
 
+      <SoftwareAppSchema />
       <FAQSchema />
     </div>
   );

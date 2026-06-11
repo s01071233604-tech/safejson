@@ -1,80 +1,111 @@
-# SafeJSON — The JSON tool that never sees your data
+# SafeJSON - The JSON tool that never sees your data
 
-A privacy-first JSON formatter. Format, validate, and debug JSON entirely in your browser. No server. No ads. No tracking.
+SafeJSON is a privacy-first JSON formatter and developer toolkit. Format,
+validate, view, compare, decode, and query JSON entirely in your browser.
 
-## Why SafeJSON?
+Website: https://www.safejson.dev
 
-In November 2025, popular online JSON tools were caught leaking over 80,000 credentials — AWS keys, GitHub tokens, and banking details. Around the same time, the most popular JSON Formatter browser extension (2M+ users) was sold, closed-sourced, and injected with adware.
+## Why SafeJSON exists
 
-SafeJSON is different: **all processing happens in your browser. Zero network requests.**
+Developers paste sensitive JSON into online tools every day: API responses,
+JWTs, credentials, config files, logs, webhooks, and production payloads.
 
-[![Product Hunt](https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1166144&theme=dark)](https://www.producthunt.com/products/safejson-privacy?embed=true&utm_source=badge-featured&utm_medium=badge)
+SafeJSON is built around a simple promise: your JSON should not leave your
+browser.
 
-## Features
+You do not have to trust that promise. You can verify it:
 
-### Web Tool ([safejson.dev](https://www.safejson.dev))
-- Instant JSON formatting with syntax highlighting
-- Collapsible tree view for exploring nested structures
-- Error detection with line and column numbers
-- Copy / Download formatted JSON
-- Dark theme by default
-- Cmd+Enter to format
+1. Open https://www.safejson.dev
+2. Open DevTools
+3. Open the Network tab
+4. Paste JSON and use the formatter
+5. Confirm that pasted JSON is processed without data-upload requests
 
-### Browser Extension
-- Auto-detects JSON responses on any URL
-- Syntax highlighting: strings (green), numbers (gold), booleans (cyan), null (gray)
-- One-click Copy / Raw toggle
-- "Open in SafeJSON" button for full tree view inspection
-- Available on Edge Add-ons
+## Tools
 
-## How to verify the privacy claim
+### Free tools
 
-1. Open [safejson.dev](https://www.safejson.dev)
-2. Open DevTools → Network tab
-3. Paste any JSON
-4. Observe: **zero network requests**
+- JSON Formatter
+- JSON Validator
+- JSON Beautifier
+- JSON Viewer
+- JSON Parser
+- CSV to JSON
+- JSON to CSV
 
-All formatting runs client-side. Your data never leaves your browser.
+### Pro tools
 
-## Install the extension
+- JSON Diff Checker
+- JWT Decoder
+- JSONPath Query
+- JSON Schema Validator
 
-### From Edge Add-ons Store
-Search "SafeJSON" in the Edge Add-ons store.
+SafeJSON Pro is $5/month or $39/year. One license activates up to 2 devices.
+Payment and license delivery are handled by Lemon Squeezy.
 
-### Manual install (Chrome / Edge / Brave)
-1. Download or clone this repository
-2. Open `chrome://extensions` (or `edge://extensions`)
-3. Enable "Developer mode"
+Pricing: https://www.safejson.dev/pricing
+
+## Large JSON support
+
+SafeJSON is designed for 50MB+ JSON files in formatter, beautifier, viewer, and
+parser workflows. Large JSON is parsed with a Web Worker so the UI stays
+responsive.
+
+## Key pages
+
+- JSON Formatter: https://www.safejson.dev/
+- JSON Validator: https://www.safejson.dev/json-validator
+- JSON Beautifier: https://www.safejson.dev/json-beautifier
+- JSON Viewer: https://www.safejson.dev/json-viewer
+- JSON Parser: https://www.safejson.dev/json-parser
+- JSON Diff: https://www.safejson.dev/diff
+- JWT Decoder: https://www.safejson.dev/jwt
+- JSONPath Query: https://www.safejson.dev/jsonpath
+- JSON Schema Validator: https://www.safejson.dev/schema
+- SafeJSON Answers: https://www.safejson.dev/answers
+- SafeJSON vs jsonformatter.org: https://www.safejson.dev/vs/jsonformatter-org
+
+## Comparison
+
+| Feature | SafeJSON | Server-side JSON tools |
+| --- | --- | --- |
+| Client-side JSON processing | Yes | Usually no |
+| Pasted JSON leaves your browser | No | Often yes |
+| Verifiable with DevTools Network | Yes | Usually no |
+| Open source | Yes | Usually no |
+| Ads | No | Often yes |
+| JSON Diff | Yes | Varies |
+| JWT Decoder | Yes | Varies |
+| JSONPath | Yes | Varies |
+| Schema Validator | Yes | Varies |
+
+## Browser extension
+
+SafeJSON also includes a browser extension for formatting raw JSON responses.
+
+Manual install:
+
+1. Clone this repository
+2. Open `chrome://extensions` or `edge://extensions`
+3. Enable developer mode
 4. Click "Load unpacked"
 5. Select the `extension/` folder
 
 ## Tech stack
 
-- [Next.js 16](https://nextjs.org)
-- [Tailwind CSS](https://tailwindcss.com)
-- [Phosphor Icons](https://phosphoricons.com)
-- Deployed on [Vercel](https://vercel.com)
+- Next.js 16
+- React 19
+- Tailwind CSS
+- Phosphor Icons
+- Vercel
+- Lemon Squeezy License API
 
-## How SafeJSON compares to other JSON tools
+## Development
 
-| Feature | SafeJSON | jsonformatter.org | codebeautify.org |
-|---------|----------|-------------------|------------------|
-| Client-side processing | Yes | No — server-side | No — server-side |
-| Data leaves your device | Never | Yes | Yes |
-| Open source | Yes (MIT) | No | No |
-| Ads | None | Yes | Yes |
-| Data breach history | None | 80K+ credentials leaked (Nov 2025) | Same breach |
-| JSON Diff | Yes (Pro) | No | No |
-| JWT Decoder | Yes (Pro) | No | No |
-| JSONPath | Yes (Pro) | No | No |
-| Schema Validator | Yes (Pro) | No | No |
-| Price | Free (core), $5/mo (Pro) | Free (ad-supported) | Free (ad-supported) |
-
-## Competitive context
-
-jsonformatter.org and codebeautify.org were found by security researchers at watchTowr (November 2025) to have leaked over 80,000 user credentials — including AWS keys, GitHub tokens, and banking details — through an unprotected "Recent Links" feature. The data was accessible without authentication, and attackers were confirmed to be actively scraping the data within 48 hours.
-
-SafeJSON was built in response: if all processing happens in the browser, there is nothing to leak.
+```bash
+npm install
+npm run dev
+```
 
 ## License
 

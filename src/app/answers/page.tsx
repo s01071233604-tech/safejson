@@ -63,6 +63,22 @@ const answers = [
     q: "Is SafeJSON free?",
     a: "Core JSON formatting, validation, tree view, viewing, parsing, and beautifying are free. Advanced tools such as JSON Diff, JWT Decoder, JSONPath, and JSON Schema Validator are offered as Pro tools.",
   },
+  {
+    q: "What does SafeJSON Pro include?",
+    a: "SafeJSON Pro includes unlimited use of JSON Diff, JWT Decoder, JSONPath Query, and JSON Schema Validator. These tools continue to process user data locally in the browser.",
+  },
+  {
+    q: "How much does SafeJSON Pro cost?",
+    a: "SafeJSON Pro costs $5 per month or $39 per year. The yearly plan saves about 35% compared with monthly billing.",
+  },
+  {
+    q: "How does SafeJSON Pro activation work?",
+    a: "After checkout, Lemon Squeezy emails a SafeJSON Pro license key. The user pastes that key on the SafeJSON unlock page to activate Pro in the current browser.",
+  },
+  {
+    q: "How many devices can use one SafeJSON Pro license?",
+    a: "One SafeJSON Pro license can be activated on up to 2 devices.",
+  },
 ];
 
 export default function AnswersPage() {
@@ -141,6 +157,10 @@ export default function AnswersPage() {
             <Link href="/support" className="p-4 rounded-xl border border-zinc-800 hover:border-zinc-700 transition-colors">
               <p className="text-sm font-medium">Help & FAQ</p>
               <p className="text-xs text-zinc-500 mt-1">Step-by-step SafeJSON usage guides.</p>
+            </Link>
+            <Link href="/pricing" className="p-4 rounded-xl border border-zinc-800 hover:border-zinc-700 transition-colors">
+              <p className="text-sm font-medium">SafeJSON Pro pricing</p>
+              <p className="text-xs text-zinc-500 mt-1">Diff, JWT, JSONPath, and Schema tools for $5/month.</p>
             </Link>
           </div>
         </section>

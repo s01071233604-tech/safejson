@@ -1,7 +1,42 @@
 import Link from "next/link";
-import { BreadcrumbSchema } from "../components/StructuredData";
+import {
+  BreadcrumbSchema,
+  JsonLdScript,
+  ProductSchema,
+} from "../components/StructuredData";
 
 export default function PricingPage() {
+  const pricingFaqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "What happens after I buy SafeJSON Pro?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Lemon Squeezy sends a SafeJSON Pro license key by email. Open the SafeJSON unlock page, paste the license key, and the browser is activated for Pro tools.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "How many devices can use one SafeJSON Pro license?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Each SafeJSON Pro license can be activated on up to 2 devices.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Does SafeJSON Pro upload my JSON, JWT, or schema data?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "No. SafeJSON Pro tools run locally in the browser. Payment and license activation happen through Lemon Squeezy, but pasted JSON, JWTs, JSONPath queries, and schemas are processed client-side.",
+        },
+      },
+    ],
+  };
+
   return (
     <div className="min-h-screen bg-zinc-950 text-zinc-100 font-sans">
       <BreadcrumbSchema
@@ -10,6 +45,8 @@ export default function PricingPage() {
           { name: "Pricing", url: "https://www.safejson.dev/pricing" },
         ]}
       />
+      <ProductSchema />
+      <JsonLdScript data={pricingFaqSchema} />
       <header className="border-b border-zinc-800">
         <div className="max-w-4xl mx-auto px-4 h-14 flex items-center">
           <Link
@@ -156,6 +193,10 @@ export default function PricingPage() {
               Lemon Squeezy.
             </p>
             <p className="text-xs text-zinc-500 text-center mt-3">
+              After checkout, Lemon Squeezy emails your license key. One license
+              activates up to 2 devices.
+            </p>
+            <p className="text-xs text-zinc-500 text-center mt-3">
               Already purchased?{" "}
               <Link
                 href="/unlock"
@@ -196,6 +237,37 @@ export default function PricingPage() {
                 </h3>
                 <p className="mt-2 text-xs leading-relaxed text-zinc-500">
                   {item.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="max-w-3xl mx-auto mt-14 border-t border-zinc-800/50 pt-10">
+          <h2 className="text-center text-xl font-semibold mb-6">
+            SafeJSON Pro questions
+          </h2>
+          <div className="space-y-5">
+            {[
+              {
+                q: "What happens after checkout?",
+                a: "Lemon Squeezy redirects you back to SafeJSON and emails your license key. Paste that key on the unlock page to activate Pro in this browser.",
+              },
+              {
+                q: "Can I use Pro on more than one device?",
+                a: "Yes. Each license supports up to 2 device activations, so you can use it on your main browser and one backup device.",
+              },
+              {
+                q: "Do Pro tools still run locally?",
+                a: "Yes. Diff, JWT Decoder, JSONPath, and Schema Validator still process your data in the browser. License activation is the only server-backed step.",
+              },
+            ].map((item) => (
+              <div key={item.q}>
+                <h3 className="text-sm font-semibold text-zinc-200">
+                  {item.q}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-zinc-500">
+                  {item.a}
                 </p>
               </div>
             ))}
