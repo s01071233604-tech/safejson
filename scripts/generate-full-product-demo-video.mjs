@@ -10,6 +10,8 @@ const webmFile = path.join(outputDir, "safejson-full-product-demo.raw.webm");
 const wavFile = path.join(outputDir, "safejson-full-product-demo-voiceover.wav");
 const mp4File = path.join(outputDir, "safejson-full-product-demo.mp4");
 const ps1File = path.join(tempDir, "voiceover.ps1");
+const voiceoverTextFile = path.join(tempDir, "voiceover.txt");
+const neuralMp3File = path.join(tempDir, "voiceover-neural.mp3");
 const ffmpegPath =
   "C:\\Users\\cacar\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Gyan.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe\\ffmpeg-8.1.1-full_build\\bin\\ffmpeg.exe";
 
@@ -45,6 +47,29 @@ function run(command, args) {
 
 async function makeVoiceover() {
   await fs.mkdir(tempDir, { recursive: true });
+  await fs.writeFile(voiceoverTextFile, voiceover.trim(), "utf8");
+
+  try {
+    await run("python", [
+      "-m",
+      "edge_tts",
+      "--voice",
+      "en-US-GuyNeural",
+      "--rate",
+      "-8%",
+      "--pitch",
+      "-1Hz",
+      "--file",
+      voiceoverTextFile,
+      "--write-media",
+      neuralMp3File,
+    ]);
+    await run(ffmpegPath, ["-y", "-i", neuralMp3File, "-ar", "44100", "-ac", "1", wavFile]);
+    return;
+  } catch (error) {
+    console.warn(`Neural TTS failed, falling back to Windows SAPI: ${error.message}`);
+  }
+
   const escapedText = voiceover.replace(/`/g, "``").replace(/\$/g, "`$");
   const escapedOut = wavFile.replace(/'/g, "''");
   const ps = `
