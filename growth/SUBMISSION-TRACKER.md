@@ -24,26 +24,32 @@ The user should complete tasks when the platform depends on founder identity, ac
 | Platform | Owner | Current Status | Risk | Copy Source | Proof Needed | Next Action |
 | --- | --- | --- | --- | --- | --- | --- |
 | GitHub README | Codex | Done | Low | Repo copy | Repo URL | Keep README aligned with pricing and privacy claims |
-| GitHub Discussion or Issue | User or Codex with logged-in browser | Not started | Medium | `POSTING-PACK-001.md` GitHub draft | Discussion/issue URL | Create feedback thread asking whether DevTools verification is clear |
-| AlternativeTo | User | Not started | Low | Directory Submission Copy | Listing URL or pending screenshot | Submit SafeJSON as a privacy-first JSON formatter |
-| SaaSHub | User | Not started | Low | Directory Submission Copy | Listing URL or pending screenshot | Submit SafeJSON under Developer Tools / JSON |
-| Betalist | User | Not started | Low | Directory Submission Copy | Listing URL or pending screenshot | Submit product listing |
-| Toolify | User | Not started | Low | Directory Submission Copy | Listing URL or pending screenshot | Submit product listing if it accepts non-AI developer tools |
-| DEV.to | User, or Codex if already logged in and approved | Draft ready | Medium | DEV.to Article Draft | Article URL | Publish article, then add canonical link if needed |
-| Indie Hackers | User | Draft ready | Medium | Indie Hackers Post | Post URL | Publish as founder update, respond to comments manually |
-| Hacker News | User only | Draft ready | High | Show HN Draft | HN thread URL | Post manually from a real account; do not repost if it fails |
-| Product Hunt | User only | Not started | High | Directory copy plus founder story | Launch URL or draft screenshot | Create draft first; launch only when profile and visuals are ready |
-| Reddit | User only | Not started | High | Custom human-written comments | Thread/comment URLs | Post only in relevant threads with real context, not generic promotion |
-| LinkedIn founder profile | User only | Not started | Medium | Short founder post | Post URL | Publish founder-side launch note and link to SafeJSON |
-| LinkedIn company page | User only | Not started | Medium | Product description | Company page URL | Create page if desired; add website and GitHub |
-| YouTube | User with Codex script help | Not started | Medium | Video script to be written | Video URL | Publish DevTools verification demo, 60-120 seconds |
-| Wikipedia | User only, later | Not ready | Very high | N/A | N/A | Do not attempt until there is independent notability coverage |
+| GitHub Discussion or Issue | User or Codex with logged-in browser | Not started | Medium | `OUTREACH-WAVE-001.md` GitHub draft | Discussion/issue URL | Create feedback thread asking whether DevTools verification is clear |
+| SaaSHub | User | Claimed submitted 2026-06-11; proof URL needed | Low | `OUTREACH-WAVE-001.md` SaaSHub copy | Listing URL | Verify listing is live; add proof link to tracker |
+| Indie Hackers | User | Claimed submitted 2026-06-11; proof URL needed | Medium | `OUTREACH-WAVE-001.md` Indie Hackers copy | Post URL | Verify post is live; add proof link to tracker |
+| AlternativeTo | User | Blocked — account must be 7 days old (~June 18) | Low | `OUTREACH-WAVE-001.md` AlternativeTo copy | Listing URL or pending screenshot | Submit on/after June 18 |
+| Betalist | User | Blocked — site inaccessible from user's region | Low | `OUTREACH-WAVE-001.md` Betalist copy | Listing URL or pending screenshot | Retry with alternative network or skip |
+| Toolify.ai | User | Skipped — paid submission required | Low | N/A | N/A | Skip unless free tier becomes available |
+| TAAFT | User | Skipped — paid submission required | Low | N/A | N/A | Skip unless free tier becomes available |
+| DEV.to | User, or Codex if already logged in | Draft ready | Medium | `OUTREACH-WAVE-001.md` DEV.to draft | Article URL | Publish article; add canonical link if needed |
+| Hacker News | User only | Draft ready | High | `OUTREACH-WAVE-001.md` Show HN draft | HN thread URL | Post manually from a real account; do not repost if it fails |
+| Product Hunt | User only | Claimed submitted; proof URL needed | High | `OUTREACH-WAVE-001.md` Product Hunt draft | Launch URL or draft screenshot | Verify listing status; prepare full launch draft |
+| Reddit | User only | Banned from r/webdev; recovery window ends ~June 25 | High | `OUTREACH-WAVE-001.md` Reddit recovery draft | Thread/comment URLs | Wait until June 25; post short casual SideProject note |
+| LinkedIn founder profile | User only | Not started | Medium | `OUTREACH-WAVE-001.md` LinkedIn draft | Post URL | Publish founder-side launch note |
+| LinkedIn company page | User only | In progress (registration started 2026-06-11) | Medium | Product description | Company page URL | Complete registration; add to Person + Organization schema sameAs |
+| Edge Add-ons | User | Submitted; under review | Low | Extension listing | Store URL | Wait for review; add listing URL when approved |
+| YouTube | User with Codex script help | Not started | Medium | Video script TBD | Video URL | Record DevTools verification demo, 60–120 seconds |
+| Wikipedia | User only, later | Not ready | Very high | N/A | N/A | Do not attempt until independent notability coverage exists |
 
 ## Proof Log
 
 | Date | Platform | Status | Proof Link | Notes |
 | --- | --- | --- | --- | --- |
 | 2026-06-11 | Production SEO/GEO health | Passed | https://www.safejson.dev | Site-side quick wins are live; external citations are the next bottleneck |
+| 2026-06-11 | SaaSHub | Claimed submitted | _needs proof URL_ | Per GEO-BRAND-MENTIONS.md; verify listing is live |
+| 2026-06-11 | Indie Hackers | Claimed submitted | _needs proof URL_ | Per GEO-BRAND-MENTIONS.md; verify post is live |
+| 2026-06-11 | Product Hunt | Claimed submitted | _needs proof URL_ | Per GEO-BRAND-MENTIONS.md; featured badge on README |
+| 2026-06-11 | Edge Add-ons | Submitted, under review | _pending_ | Extension submitted to Edge Add-ons store |
 | 2026-06-12 | Google Search Console sitemap | Success | `/sitemap.xml` in GSC | Submitted sitemap discovered 24 pages; status successful |
 | 2026-06-12 | Bing Webmaster sitemap | Processing | `https://www.safejson.dev/sitemap.xml` | Known sitemaps: 1; errors: 0; warnings: 0; total URLs discovered: 24 |
 | 2026-06-12 | IndexNow | Submitted | `npm run indexnow` | Submitted 24 sitemap URLs; IndexNow returned 200 OK |
@@ -61,12 +67,14 @@ The user should complete tasks when the platform depends on founder identity, ac
 
 ## This Week's Priority Order
 
-1. Submit AlternativeTo.
-2. Submit SaaSHub.
-3. Publish DEV.to article.
-4. Create GitHub feedback thread.
-5. Publish LinkedIn founder post.
-6. Prepare Product Hunt draft, but do not launch until the profile, screenshots, and first-user feedback are stronger.
+1. Verify SaaSHub and Indie Hackers claimed submissions — add proof URLs to tracker.
+2. Publish DEV.to article (draft ready in `OUTREACH-WAVE-001.md`).
+3. Create GitHub Discussion feedback thread.
+4. Complete LinkedIn company page registration; add to schema sameAs.
+5. Publish LinkedIn founder post (draft in `OUTREACH-WAVE-001.md`).
+6. Prepare Product Hunt full launch draft (do not launch until profile and visuals are ready).
+7. Submit AlternativeTo on/after June 18 (account age requirement).
+8. Prepare Reddit recovery post for June 25 (draft in `OUTREACH-WAVE-001.md`).
 
 ## Decision Rules
 
