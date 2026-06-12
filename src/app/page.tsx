@@ -22,13 +22,44 @@ import { useJsonWorker } from "./hooks/useJsonWorker";
 
 type Tab = "tree" | "raw";
 
+function getSampleJson() {
+  const data = {
+    name: "SafeJSON",
+    version: "1.0.0",
+    description: "Privacy-first JSON formatter",
+    features: [
+      "Instant formatting",
+      "Tree view with collapse",
+      "Error detection",
+      "Dark mode",
+      "100% client-side",
+    ],
+    author: {
+      name: "Dev",
+      role: "Solo founder",
+    },
+    stats: {
+      downloads: 0,
+      rating: 5,
+      isFree: true,
+      config: null,
+    },
+  };
+
+  return {
+    data,
+    text: JSON.stringify(data, null, 2),
+  };
+}
+
 export default function Home() {
-  const [input, setInput] = useState("");
+  const initialSample = getSampleJson();
+  const [input, setInput] = useState(initialSample.text);
   const [theme, setTheme] = useState<"dark" | "light">("dark");
   const [tab, setTab] = useState<Tab>("tree");
   const [error, setError] = useState<string | null>(null);
-  const [parsed, setParsed] = useState<JsonValue | null>(null);
-  const [formattedText, setFormattedText] = useState("");
+  const [parsed, setParsed] = useState<JsonValue | null>(initialSample.data);
+  const [formattedText, setFormattedText] = useState(initialSample.text);
   const [copied, setCopied] = useState(false);
   const {
     state: jsonWorker,
@@ -56,14 +87,6 @@ export default function Home() {
     }, 0);
 
     return () => window.clearTimeout(handle);
-  }, []);
-
-  // Auto-fill sample JSON on first visit so visitors see formatted output immediately
-  useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    if (params.get("json")) return; // don't override ?json= from extension
-    handleSample();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const toggleTheme = useCallback(() => {
@@ -122,37 +145,19 @@ export default function Home() {
     URL.revokeObjectURL(url);
   }, [currentFormattedText]);
 
-  const handleSample = useCallback(() => {
-    const sample = {
-      name: "SafeJSON",
-      version: "1.0.0",
-      description: "Privacy-first JSON formatter",
-      features: [
-        "Instant formatting",
-        "Tree view with collapse",
-        "Error detection",
-        "Dark mode",
-        "100% client-side",
-      ],
-      author: {
-        name: "Dev",
-        role: "Solo founder",
-      },
-      stats: {
-        downloads: 0,
-        rating: 5,
-        isFree: true,
-        config: null,
-      },
-    };
-    const text = JSON.stringify(sample, null, 2);
+  const loadSample = useCallback(() => {
+    const { data, text } = getSampleJson();
     setInput(text);
-    setParsed(sample);
+    setParsed(data);
     setFormattedText(text);
     setError(null);
     resetJsonWorker();
-    trackEvent("tool_sample_loaded", { tool: "formatter" });
   }, [resetJsonWorker]);
+
+  const handleSample = useCallback(() => {
+    loadSample();
+    trackEvent("tool_sample_loaded", { tool: "formatter" });
+  }, [loadSample]);
 
   useEffect(() => {
     if (!jsonWorker.result) return;
