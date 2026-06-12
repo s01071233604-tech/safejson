@@ -46,3 +46,7 @@ next-env.d.ts
 # extension builds
 *.crx
 *.zip
+
+# generated growth media
+growth/assets/*.webm
+growth/assets/*.mp4
