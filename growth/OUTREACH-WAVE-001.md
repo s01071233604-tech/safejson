@@ -182,34 +182,51 @@ Feedback I am especially looking for:
 
 ### 4. GitHub Discussion
 
-**Action:** Create a feedback discussion in the SafeJSON repo. Claude/Codex can do this if the browser session is authenticated with GitHub.
+**Status (2026-06-12):** Blocked — `gh` CLI not available in this environment; cannot check if Discussions is enabled or create the thread programmatically. **User must do this step manually.**
+
+**Before creating:** Check repo Settings > Features > Discussions is ON.
+1. Go to https://github.com/s01071233604-tech/safejson/settings
+2. Scroll to "Features" section
+3. Ensure "Discussions" is checked
+4. If it was off, enabling it will create a Discussions tab immediately
 
 **Repo:** https://github.com/s01071233604-tech/safejson
 
-**Category:** General or Ideas
+**Category:** General
 
-**Title:** Feedback wanted: is the DevTools privacy verification clear?
+**Title:** `Feedback wanted: a JSON formatter that lets you verify no pasted-content upload`
 
-**Body:**
+**Body (copy-paste ready):**
 ```markdown
-SafeJSON's core positioning is "verify, don't trust."
+I'm building SafeJSON, a privacy-first JSON formatter and developer toolkit.
 
-The intended user flow:
+The core idea is simple: you should not have to trust the tool. You should be able to verify it.
 
-1. Open SafeJSON
-2. Open DevTools -> Network
-3. Paste JSON
-4. Use formatter, diff, JWT decoder, JSONPath, or schema validator
-5. Confirm that pasted content is not uploaded
+Verification flow:
+1. Open DevTools
+2. Go to the Network tab
+3. Paste JSON into SafeJSON
+4. Confirm that no request contains your pasted content
 
-Question: is this verification flow obvious enough from the homepage and tool UI?
+SafeJSON currently includes:
+- JSON formatting and validation
+- JSON diff
+- JWT decoding
+- JSONPath queries
+- JSON Schema validation
 
-Feedback welcome on:
+The product is open source and runs pasted JSON locally in the browser.
 
-- wording
-- trust signals
-- confusing parts of the Pro license flow
-- missing JSON workflows
+I'm looking for feedback from developers who regularly paste logs, API responses, config files, JWTs, or production JSON into online tools.
+
+Specific feedback I'd love:
+- Is the "verify in DevTools" privacy model clear enough?
+- What would make you trust this tool more?
+- Which JSON workflow should be improved next?
+- Are there any claims that feel too broad or need tighter wording?
+
+Website: https://www.safejson.dev
+Source: https://github.com/s01071233604-tech/safejson
 ```
 
 **Proof link:** `[ ]`
@@ -349,10 +366,11 @@ Would love feedback from other dev tool builders on the privacy positioning.
 
 ## Execution Checklist
 
-- [ ] SaaSHub: verify listing live, add proof URL to tracker
-- [ ] Indie Hackers: verify post live, add proof URL to tracker
-- [ ] DEV.to: publish article, add canonical link if needed, add proof URL
-- [ ] GitHub Discussion: create feedback thread, add proof URL
+- [x] SaaSHub: listing URL recorded in tracker
+- [x] Indie Hackers: listing URL recorded in tracker
+- [x] DEV.to: 3 posts published; 1 comment replied by founder 2026-06-12
+- [x] CSP trust signal: deployed 2026-06-12 (10 directives, verified via growth:check)
+- [ ] **GitHub Discussion: BLOCKED — User must enable Discussions then copy-paste from above**
 - [ ] LinkedIn: publish founder post, add proof URL
 - [ ] LinkedIn company page: complete registration, add to schema
 - [ ] AlternativeTo: submit on/after June 18, add proof URL

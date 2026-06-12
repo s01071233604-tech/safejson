@@ -24,14 +24,14 @@ The user should complete tasks when the platform depends on founder identity, ac
 | Platform | Owner | Current Status | Risk | Copy Source | Proof Needed | Next Action |
 | --- | --- | --- | --- | --- | --- | --- |
 | GitHub README | Codex | Done | Low | Repo copy | Repo URL | Keep README aligned with pricing and privacy claims |
-| GitHub Discussion or Issue | User or Codex with logged-in browser | Not started | Medium | `OUTREACH-WAVE-001.md` GitHub draft | Discussion/issue URL | Create feedback thread asking whether DevTools verification is clear |
+| GitHub Discussion or Issue | User only | Blocked — gh CLI unavailable; user must verify Discussions is enabled and create thread manually | Medium | `OUTREACH-WAVE-001.md` GitHub draft | Discussion/issue URL | 1. Check repo Settings > Features > Discussions is ON. 2. Copy-paste from OUTREACH-WAVE-001.md |
 | SaaSHub | User | Public candidate URL provided | Low | `OUTREACH-WAVE-001.md` SaaSHub copy | https://www.saashub.com/safejson-alternatives | Verify in browser after Cloudflare challenge; monitor listing status |
 | Indie Hackers | User | Proof URL provided | Medium | `OUTREACH-WAVE-001.md` Indie Hackers copy | https://www.indiehackers.com/product/safejson-2 | Monitor for comments/referrals |
 | AlternativeTo | User | Blocked — account must be 7 days old (~June 18) | Low | `OUTREACH-WAVE-001.md` AlternativeTo copy | Listing URL or pending screenshot | Submit on/after June 18 |
 | Betalist | User | Blocked — site inaccessible from user's region | Low | `OUTREACH-WAVE-001.md` Betalist copy | Listing URL or pending screenshot | Retry with alternative network or skip |
 | Toolify.ai | User | Skipped — paid submission required | Low | N/A | N/A | Skip unless free tier becomes available |
 | TAAFT | User | Skipped — paid submission required | Low | N/A | N/A | Skip unless free tier becomes available |
-| DEV.to | User | 3 posts live; at least 1 comment | Medium | `OUTREACH-WAVE-001.md` DEV.to draft | Public article URLs | Add exact article URLs to proof log when available; reply to comments thoughtfully |
+| DEV.to | User | 3 posts live; 1 comment replied by founder | Medium | `OUTREACH-WAVE-001.md` DEV.to draft | Public article URLs | Monitor for further comments; add exact article URLs when available |
 | Hacker News | User only | Draft ready | High | `OUTREACH-WAVE-001.md` Show HN draft | HN thread URL | Post manually from a real account; do not repost if it fails |
 | Product Hunt | User only | Public candidate URL provided; launch not confirmed | High | `OUTREACH-WAVE-001.md` Product Hunt draft | https://www.producthunt.com/products/safejson-privacy?launch=safejson-privacy | Keep as draft unless launch page is publicly visible and ready |
 | Reddit | User only | Banned from r/webdev; recovery window ends ~June 25 | High | `OUTREACH-WAVE-001.md` Reddit recovery draft | Thread/comment URLs | Wait until June 25; post short casual SideProject note |
@@ -52,7 +52,8 @@ The user should complete tasks when the platform depends on founder identity, ac
 | 2026-06-11 | Edge Add-ons | Submitted, under review | _pending_ | Extension submitted to Edge Add-ons store |
 | 2026-06-12 | Google Search Console sitemap | Success | `/sitemap.xml` in GSC | Submitted sitemap discovered 24 pages; status successful |
 | 2026-06-12 | Bing Webmaster sitemap | Success | `https://www.safejson.dev/sitemap.xml` | Known sitemaps: 1; errors: 0; warnings: 0; total URLs discovered: 24 |
-| 2026-06-12 | DEV.to | 3 posts live | DEV.to dashboard screenshot | Total comments: 1; total views under 500; replace with public article URLs when available |
+| 2026-06-12 | DEV.to | 3 posts live; 1 comment replied | DEV.to dashboard screenshot | Founder replied to the "CSP as trust signal" comment; monitor for further discussion |
+| 2026-06-12 | Content-Security-Policy | Deployed | `npm run growth:check` — CSP check | CSP header live on production; 10 directives including frame-ancestors 'none', connect-src restricted to GA only |
 | 2026-06-12 | IndexNow | Submitted | `npm run indexnow` | Submitted 24 sitemap URLs; IndexNow returned 200 OK |
 
 ## Weekly Execution Checklist
@@ -68,9 +69,9 @@ The user should complete tasks when the platform depends on founder identity, ac
 
 ## This Week's Priority Order
 
-1. Verify SaaSHub and Indie Hackers claimed submissions — add proof URLs to tracker.
-2. Reply to the DEV.to comment and add exact public article URLs to this tracker.
-3. Create GitHub Discussion feedback thread.
+1. ~~Verify SaaSHub and Indie Hackers claimed submissions~~ ✓ Proof URLs recorded.
+2. ~~Reply to the DEV.to comment~~ ✓ Founder replied 2026-06-12.
+3. **Create GitHub Discussion feedback thread** — User must: check repo Settings > Features > Discussions is ON, then copy-paste from `OUTREACH-WAVE-001.md`.
 4. Complete LinkedIn company page registration; add to schema sameAs.
 5. Publish LinkedIn founder post (draft in `OUTREACH-WAVE-001.md`).
 6. Prepare Product Hunt full launch draft (do not launch until profile and visuals are ready).
