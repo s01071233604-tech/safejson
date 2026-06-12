@@ -75,7 +75,7 @@ SafeJSON is a privacy-first JSON developer toolkit with a unique and verifiable 
 | Hacker News | Draft ready | Show HN when 3+ directories confirmed | — |
 | Reddit | Blocked until June 25 | r/SideProject recovery post | Organic presence in r/webdev |
 | Directories | 4 submitted | AlternativeTo (June 18), 5 more | 15+ total listings |
-| Product Hunt | Draft | Launch when profile ready | "Users Love Us" badge |
+| Product Hunt | Live | Listing cleanup (wording, URL, screenshots) | "Users Love Us" badge when 20+ reviews |
 | LinkedIn | Pending | Founder post + company page | Weekly content |
 
 ### Skipped (with rationale)
@@ -140,7 +140,7 @@ Not applicable at current stage. Foundation:
 | 4 | DEV.to weekly post | Acquisition | User |
 | 5 | Reddit r/SideProject recovery post (Jun 25+) | Acquisition | User |
 | 6 | LinkedIn founder post | Acquisition | User |
-| 7 | Product Hunt launch prep (screenshots, video, maker comment) | Acquisition | User + Claude |
+| 7 | Product Hunt listing cleanup (wording, URL, screenshots) | Acquisition | User |
 | 8 | Add analytics funnel: checkout click → checkout return → activation | Revenue | Claude |
 | 9 | A/B test Pro limit messaging | Revenue | Claude |
 | 10 | Second blog post per content strategy | Acquisition | Claude draft |
@@ -185,7 +185,7 @@ Not applicable at current stage. Foundation:
 
 1. **CAC unknown** — no conversion data yet. Every projection is estimated. Solve by week 12 with GA funnel data.
 2. **Wikidata timing** — notability risk. Reassess after 3+ independent press mentions.
-3. **Show HN timing** — deferred. Reassess after Product Hunt launch + 5+ directory listings confirmed.
+3. **Show HN timing** — Product Hunt is live. Defer until PH listing is cleaned up and 5+ directory listings are confirmed.
 4. **Real name vs pseudonym** — "Lizzy_Megamind" flagged as CRITICAL EEAT risk. Founder decision required.
 5. **Cookie consent** — GDPR gap. GA loads unconditionally. Add consent banner or switch to cookieless analytics.
 6. **YouTube channel** — high AI citation correlation (0.737) but requires video production. Cost/benefit TBD.

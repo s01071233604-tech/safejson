@@ -27,7 +27,7 @@
 | 5 | LinkedIn founder post | — | User only | Medium | Not started |
 | 6 | AlternativeTo | 85 | User (on/after June 18) | Low | Blocked by account age |
 | 7 | Hacker News | — | User only | High | Draft ready |
-| 8 | Product Hunt | — | User only | High | Claimed submitted; full draft needed |
+| 8 | Product Hunt | — | User only | High | Live; wording + URL cleanup needed |
 | 9 | Reddit | — | User only | High | Recovery window ends ~June 25 |
 
 ---
@@ -295,36 +295,21 @@ I built it after seeing how often developers paste production API responses, JWT
 
 ---
 
-### 8. Product Hunt — Full Launch Draft
+### 8. Product Hunt — Live Listing
 
-**Action:** User only. The claimed submission may be a "coming soon" or placeholder. Prepare a full launch draft but do not launch until:
-- Profile image, tagline, and screenshots are ready
-- At least 3 external directory listings are live
-- First-user feedback exists (DEV.to comments, GitHub stars, etc.)
+**Status (2026-06-12):** Live at https://www.producthunt.com/products/safejson-privacy?launch=safejson-privacy
 
-**Tagline:** The JSON tool that never sees your data. Prove it yourself.
+**Action:** User only. Do NOT relaunch. Do NOT create a duplicate. Edit the existing listing if PH allows post-launch edits:
 
-**Description:**
-SafeJSON is a privacy-first JSON toolkit for developers. Every tool runs entirely in your browser — formatter, validator, diff checker, JWT decoder, JSONPath query, and schema validator. You do not have to trust the claim. Open DevTools -> Network, paste JSON, and confirm that pasted content is not uploaded.
+**Cleanup checklist (user must verify in PH dashboard):**
+- [ ] Website URL: use `https://www.safejson.dev` only (remove `safejson.vercel.app`)
+- [ ] Remove "zero network requests" → "no pasted-content upload"
+- [ ] Remove "no tracking" → "no pasted-content analytics"
+- [ ] Use correct wording: "verify in DevTools" / "no request contains pasted content"
+- [ ] Add screenshots (5-8 at 1270×760) if editable
+- [ ] Add demo video (60-90s) if editable
 
-Built after jsonformatter.org leaked 80,000 credentials through server-side processing in November 2025.
-
-**Key features to highlight:**
-- All tools run client-side — verifiable with DevTools
-- Free core tools, Pro at $5/month or $39/year
-- Open source (MIT) on GitHub
-- Browser extension for auto-formatting JSON responses
-- Large JSON support (50MB+) via Web Workers
-- No ads, no pasted-content analytics
-
-**Maker comment draft (post immediately after launch):**
-```
-I built SafeJSON after the jsonformatter.org data leak. The core idea is simple: you should never need to upload your JSON to format it. Every tool runs in your browser, and you can verify that with DevTools.
-
-This is a solo project. I would love early feedback on the privacy verification flow, the Pro gating, and what JSON workflows are still annoying in your day-to-day work.
-```
-
-**Proof link:** `[ ]`
+**Proof link:** https://www.producthunt.com/products/safejson-privacy?launch=safejson-privacy
 
 ---
 
@@ -368,7 +353,7 @@ Would love feedback from other dev tool builders on the privacy positioning.
 - [ ] LinkedIn: publish founder post, add proof URL
 - [ ] LinkedIn company page: complete registration, add to schema
 - [ ] AlternativeTo: submit on/after June 18, add proof URL
-- [ ] Product Hunt: prepare full launch materials (do not launch yet)
+- [ ] Product Hunt: cleanup live listing (wording, URL, screenshots) — do NOT relaunch
 - [ ] HN: post when 3+ directories are confirmed live
 - [ ] Reddit: post on/after June 25 on r/SideProject
 

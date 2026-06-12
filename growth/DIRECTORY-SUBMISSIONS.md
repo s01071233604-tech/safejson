@@ -31,7 +31,7 @@
 
 | Directory | Status | Action |
 |-----------|--------|--------|
-| **Product Hunt** | Submitted; launch not confirmed | Prepare full launch per PH playbook; need screenshots + video first |
+| **Product Hunt** | Live — public launch page at producthunt.com/products/safejson-privacy | Listing needs cleanup (see checklist below). Do NOT relaunch. |
 
 ### Tier 2 — Developer/SaaS Directories (7 platforms)
 
@@ -97,17 +97,22 @@ Privacy-first JSON toolkit. All processing is client-side — pasted JSON never 
 
 ---
 
-## Product Hunt Prep Checklist
+## Product Hunt Cleanup Checklist
 
-If/when launching PH, need before submission:
+**Status:** Listing is LIVE at https://www.producthunt.com/products/safejson-privacy?launch=safejson-privacy
+**Rule:** Do NOT relaunch. Do NOT create a duplicate listing. Edit the existing listing only.
 
-- [ ] 5-8 screenshots at 1270×760 (formatter UI, diff tool, JWT decoder, JSONPath, pricing page)
-- [ ] 60-90 second demo video (screen recording: paste JSON → format → verify in DevTools → show Pro tools)
-- [ ] Square logo 1024×1024
-- [ ] Maker comment drafted (why built, what's different, what to try)
-- [ ] 3-week warm-up: upvote + comment on other launches
-- [ ] Email list or Slack/Discord community to notify on launch day
-- [ ] Launch Tuesday-Thursday at 12:01 AM PT
+### User Must Check and Fix (if PH allows post-launch edits):
+
+- [ ] **URL:** Change to `https://www.safejson.dev` (remove any `safejson.vercel.app` reference)
+- [ ] **Tagline:** Verify it reads: "The JSON tool that never sees your data. Prove it yourself."
+- [ ] **Description:** Remove any "zero network requests" → replace with "no pasted-content upload"
+- [ ] **Description:** Remove any "no tracking" → replace with "no pasted-content analytics"
+- [ ] **Description:** Ensure it uses: "verify in DevTools" / "no request contains pasted content"
+- [ ] **Website link:** Points to `https://www.safejson.dev` only
+- [ ] **Screenshots:** Add 5-8 at 1270×760 if editable (formatter UI, diff, JWT decoder, JSONPath, pricing)
+- [ ] **Video:** Add 60-90s demo if editable (screen recording: paste JSON → format → verify in DevTools → Pro tools)
+- [ ] **Maker comment:** If editable, ensure it tells the 80K credential leak origin story — not generic marketing
 
 ---
 
@@ -126,7 +131,7 @@ G2/Capterra/TrustRadius: do NOT submit until 20+ regular users exist. Zero-revie
 
 | # | Directory | Tier | Status | URL | Date |
 |---|-----------|------|--------|-----|------|
-| 1 | Product Hunt | 1 | Submitted (draft) | producthunt.com/products/safejson-privacy | 2026-06-11 |
+| 1 | Product Hunt | 1 | Live | producthunt.com/products/safejson-privacy | Launched 2026-06-11; cleanup needed per checklist above |
 | 2 | SaaSHub | 2 | Submitted | saashub.com/safejson-alternatives | 2026-06-11 |
 | 3 | Indie Hackers | 2 | Submitted | indiehackers.com/product/safejson-2 | 2026-06-11 |
 | 4 | GitHub | 2 | Done | github.com/s01071233604-tech/safejson | — |
