@@ -22,8 +22,8 @@
 |---|----------|-----|-------|------|--------|
 | 1 | SaaSHub | 73 | User (verify) | Low | Claimed submitted 2026-06-11 |
 | 2 | Indie Hackers | 78 | User (verify) | Medium | Claimed submitted 2026-06-11 |
-| 3 | DEV.to | — | User | Medium | Draft ready |
-| 4 | GitHub Discussion | — | Claude/Codex can open if logged in | Medium | Not started |
+| 3 | DEV.to | — | User | Medium | 3 posts live; 1 comment replied 2026-06-12 |
+| 4 | GitHub Discussion | — | Claude/Codex can open if logged in | Medium | Done 2026-06-12; proof recorded |
 | 5 | LinkedIn founder post | — | User only | Medium | Not started |
 | 6 | AlternativeTo | 85 | User (on/after June 18) | Low | Blocked by account age |
 | 7 | Hacker News | — | User only | High | Draft ready |
