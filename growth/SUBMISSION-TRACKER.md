@@ -25,15 +25,15 @@ The user should complete tasks when the platform depends on founder identity, ac
 | --- | --- | --- | --- | --- | --- | --- |
 | GitHub README | Codex | Done | Low | Repo copy | Repo URL | Keep README aligned with pricing and privacy claims |
 | GitHub Discussion or Issue | User or Codex with logged-in browser | Not started | Medium | `OUTREACH-WAVE-001.md` GitHub draft | Discussion/issue URL | Create feedback thread asking whether DevTools verification is clear |
-| SaaSHub | User | Claimed submitted 2026-06-11; proof URL needed | Low | `OUTREACH-WAVE-001.md` SaaSHub copy | Listing URL | Verify listing is live; add proof link to tracker |
-| Indie Hackers | User | Claimed submitted 2026-06-11; proof URL needed | Medium | `OUTREACH-WAVE-001.md` Indie Hackers copy | Post URL | Verify post is live; add proof link to tracker |
+| SaaSHub | User | Admin/manage link provided; public proof URL still needed | Low | `OUTREACH-WAVE-001.md` SaaSHub copy | Public listing URL | Replace manage URL with the public listing URL when live |
+| Indie Hackers | User | Proof URL provided | Medium | `OUTREACH-WAVE-001.md` Indie Hackers copy | https://www.indiehackers.com/product/safejson-2 | Monitor for comments/referrals |
 | AlternativeTo | User | Blocked — account must be 7 days old (~June 18) | Low | `OUTREACH-WAVE-001.md` AlternativeTo copy | Listing URL or pending screenshot | Submit on/after June 18 |
 | Betalist | User | Blocked — site inaccessible from user's region | Low | `OUTREACH-WAVE-001.md` Betalist copy | Listing URL or pending screenshot | Retry with alternative network or skip |
 | Toolify.ai | User | Skipped — paid submission required | Low | N/A | N/A | Skip unless free tier becomes available |
 | TAAFT | User | Skipped — paid submission required | Low | N/A | N/A | Skip unless free tier becomes available |
 | DEV.to | User, or Codex if already logged in | Draft ready | Medium | `OUTREACH-WAVE-001.md` DEV.to draft | Article URL | Publish article; add canonical link if needed |
 | Hacker News | User only | Draft ready | High | `OUTREACH-WAVE-001.md` Show HN draft | HN thread URL | Post manually from a real account; do not repost if it fails |
-| Product Hunt | User only | Claimed submitted; proof URL needed | High | `OUTREACH-WAVE-001.md` Product Hunt draft | Launch URL or draft screenshot | Verify listing status; prepare full launch draft |
+| Product Hunt | User only | Launch-day/admin link provided; public launch not confirmed | High | `OUTREACH-WAVE-001.md` Product Hunt draft | Public launch URL or draft screenshot | Keep as draft until launch assets and timing are ready |
 | Reddit | User only | Banned from r/webdev; recovery window ends ~June 25 | High | `OUTREACH-WAVE-001.md` Reddit recovery draft | Thread/comment URLs | Wait until June 25; post short casual SideProject note |
 | LinkedIn founder profile | User only | Not started | Medium | `OUTREACH-WAVE-001.md` LinkedIn draft | Post URL | Publish founder-side launch note |
 | LinkedIn company page | User only | In progress (registration started 2026-06-11) | Medium | Product description | Company page URL | Complete registration; add to Person + Organization schema sameAs |
@@ -46,9 +46,9 @@ The user should complete tasks when the platform depends on founder identity, ac
 | Date | Platform | Status | Proof Link | Notes |
 | --- | --- | --- | --- | --- |
 | 2026-06-11 | Production SEO/GEO health | Passed | https://www.safejson.dev | Site-side quick wins are live; external citations are the next bottleneck |
-| 2026-06-11 | SaaSHub | Claimed submitted | _needs proof URL_ | Per GEO-BRAND-MENTIONS.md; verify listing is live |
-| 2026-06-11 | Indie Hackers | Claimed submitted | _needs proof URL_ | Per GEO-BRAND-MENTIONS.md; verify post is live |
-| 2026-06-11 | Product Hunt | Claimed submitted | _needs proof URL_ | Per GEO-BRAND-MENTIONS.md; featured badge on README |
+| 2026-06-11 | SaaSHub | Admin link provided | https://www.saashub.com/manage/safejson | Manage URL is not public proof; replace with public listing URL when available |
+| 2026-06-11 | Indie Hackers | Proof URL provided | https://www.indiehackers.com/product/safejson-2 | Product page URL provided by user |
+| 2026-06-11 | Product Hunt | Launch-day/admin link provided | https://www.producthunt.com/products/safejson-privacy/safejson-privacy/launch-day?utm_source=my-products | Treat as draft/admin proof, not public launch proof |
 | 2026-06-11 | Edge Add-ons | Submitted, under review | _pending_ | Extension submitted to Edge Add-ons store |
 | 2026-06-12 | Google Search Console sitemap | Success | `/sitemap.xml` in GSC | Submitted sitemap discovered 24 pages; status successful |
 | 2026-06-12 | Bing Webmaster sitemap | Processing | `https://www.safejson.dev/sitemap.xml` | Known sitemaps: 1; errors: 0; warnings: 0; total URLs discovered: 24 |
