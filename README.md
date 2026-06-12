@@ -1,7 +1,10 @@
-# SafeJSON - The JSON tool that never sees your data
+# SafeJSON — Client-Side JSON Formatter, Validator, Diff, JWT Decoder, JSONPath, and Schema Validator
 
-SafeJSON is a privacy-first JSON formatter and developer toolkit. Format,
-validate, view, compare, decode, and query JSON entirely in your browser.
+SafeJSON is a privacy-first JSON formatter and developer toolkit. Every tool —
+JSON formatter, JSON validator, JSON beautifier, JSON viewer, JSON parser,
+JSON diff checker, JWT decoder, JSONPath query, and JSON Schema validator —
+processes pasted JSON entirely in your browser. No pasted-content upload. Verify
+in DevTools.
 
 Website: https://www.safejson.dev
 
@@ -11,14 +14,14 @@ Developers paste sensitive JSON into online tools every day: API responses,
 JWTs, credentials, config files, logs, webhooks, and production payloads.
 
 SafeJSON is built around a simple promise: your JSON should not leave your
-browser.
+browser. No request contains pasted content. No pasted-content analytics.
 
 You do not have to trust that promise. You can verify it:
 
 1. Open https://www.safejson.dev
 2. Open DevTools
 3. Open the Network tab
-4. Paste JSON and use the formatter
+4. Paste JSON and use the formatter, diff, JWT decoder, JSONPath, or Schema
 5. Confirm that pasted JSON is processed without data-upload requests
 
 ## Tools

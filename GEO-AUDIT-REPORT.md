@@ -432,6 +432,29 @@ Carried forward from previous audit: VS pages lack cross-links, blog posts don't
 
 ---
 
+## 2026-06-12 Brand Audit Action Decisions
+
+Based on the 24/100 brand authority re-scan, the following decisions were made:
+
+| Action | Decision | Rationale |
+|--------|----------|-----------|
+| Fix GitHub discoverability | **Do now** | Repo invisible in GitHub search; 6 name-collision repos block AI entity resolution |
+| Improve README keywords | **Do now** | First ~200 words now include all key tool names + "no pasted-content upload" + "verify in DevTools" |
+| LinkedIn company page + schema sameAs | **Wait for user** | Company page registration started but not complete; add sameAs when URL is available |
+| Wikidata Q-number | **Do not do now** | SafeJSON likely does not meet Wikidata notability criteria (NCORP); risk of deletion/marking |
+| Show HN | **Defer** | Wait until external directory listings (AlternativeTo, Product Hunt) and product presence are stronger |
+| GitHub description + topics | **User must do** | Claude/Codex cannot access repo settings. Instructions provided in `growth/SUBMISSION-TRACKER.md` |
+
+### Next Steps
+
+1. User: set GitHub repo description and topics (see tracker)
+2. User: complete LinkedIn company page, send URL for schema sameAs
+3. Re-check GitHub search visibility in 7-14 days
+4. Continue weekly GEO prompt benchmark
+5. After AlternativeTo submission (June 18) + LinkedIn page, reassess Show HN timing
+
+---
+
 ## Priority Action Plan
 
 ### CRITICAL (this week)
