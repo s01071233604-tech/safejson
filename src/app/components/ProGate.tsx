@@ -199,8 +199,16 @@ export function useProUsage(tool: string) {
   useEffect(() => {
     let active = true;
     const handle = window.setTimeout(() => {
-      setCount(readUsage(tool));
-      setIsUnlocked(readUnlocked());
+      const storedUsage = readUsage(tool);
+      const storedUnlocked = readUnlocked();
+
+      setCount(storedUsage);
+      setIsUnlocked(storedUnlocked);
+      trackEvent("pro_tool_viewed", {
+        tool,
+        pro_unlocked: storedUnlocked,
+        free_usage_count: storedUsage,
+      });
 
       validateStoredProLicense()
         .then((valid) => {

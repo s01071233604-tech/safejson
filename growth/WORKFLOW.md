@@ -91,6 +91,8 @@ Codex can compile:
 - Pro checkout clicks and completed purchases if the dashboard is available.
 - Top pages and queries from GA/GSC screenshots.
 
+Use `growth/ANALYTICS-TRACKING-PLAN.md` as the event source of truth and add dated readouts like `growth/ANALYTICS-READOUT-2026-06-14.md` when the user exports GA data.
+
 Decision rule:
 
 - If pages are not indexed: prioritize crawl/index fixes.

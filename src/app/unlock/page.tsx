@@ -20,10 +20,11 @@ export default function UnlockPage() {
   useEffect(() => {
     let active = true;
     const handle = window.setTimeout(() => {
+      trackEvent("unlock_viewed", { surface: "unlock_page" });
       const params = new URLSearchParams(window.location.search);
       if (params.get("paid") === "1") {
         setPaidReturn(true);
-        trackEvent("checkout_return", { paid: true });
+        trackEvent("checkout_return", { paid: true, surface: "unlock_page" });
       }
 
       validateStoredProLicense()

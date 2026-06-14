@@ -4,6 +4,7 @@ import {
   JsonLdScript,
   ProductSchema,
 } from "../components/StructuredData";
+import EventOnView from "../components/EventOnView";
 import TrackedAnchor from "../components/TrackedAnchor";
 
 export default function PricingPage() {
@@ -40,6 +41,7 @@ export default function PricingPage() {
 
   return (
     <div className="min-h-screen bg-zinc-950 text-zinc-100 font-sans">
+      <EventOnView name="pricing_viewed" params={{ surface: "pricing_page" }} />
       <BreadcrumbSchema
         items={[
           { name: "SafeJSON", url: "https://www.safejson.dev" },

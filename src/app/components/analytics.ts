@@ -4,6 +4,14 @@ import { sendGAEvent } from "@next/third-parties/google";
 
 type AnalyticsParams = Record<string, string | number | boolean | undefined>;
 
+const UTM_KEYS = [
+  "utm_source",
+  "utm_medium",
+  "utm_campaign",
+  "utm_content",
+  "utm_term",
+] as const;
+
 export function inputSizeBucket(text: string): string {
   const bytes = new TextEncoder().encode(text).length;
 
@@ -20,8 +28,26 @@ export function trackEvent(
 ): void {
   if (typeof window === "undefined") return;
 
+  const searchParams = new URLSearchParams(window.location.search);
+  const utmParams = Object.fromEntries(
+    UTM_KEYS.map((key) => [key, searchParams.get(key) || undefined]),
+  );
+  let referrerHost: string | undefined;
+  try {
+    referrerHost = document.referrer
+      ? new URL(document.referrer).hostname
+      : undefined;
+  } catch {
+    referrerHost = undefined;
+  }
+
   sendGAEvent("event", name, {
     app: "safejson",
+    event_version: 1,
+    page_path: window.location.pathname,
+    page_title: document.title,
+    referrer_host: referrerHost,
+    ...utmParams,
     ...params,
   });
 }
