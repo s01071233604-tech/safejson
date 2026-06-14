@@ -1,0 +1,1 @@
+JWT Decoder reads the header and payload locally, so you can inspect claims without uploading the token.

@@ -40,7 +40,7 @@ The user should complete tasks when the platform depends on founder identity, ac
 | LinkedIn company page | User only | In progress (registration started 2026-06-11) | Medium | Product description | Company page URL | Complete registration; add to Person + Organization schema sameAs |
 | Edge Add-ons | User | Approved 2026-06-14 | Low | Extension listing | https://microsoftedge.microsoft.com/addons/detail/fjknnlcmogdhhnehcillihjhdgencgeh | Live on Edge Add-ons store |
 | Chrome Web Store | User | Blocked — $5 developer registration requires Visa/MC; user has no card | Low | Same extension package as Edge | Store URL | Explore alternative payment methods or virtual card options |
-| YouTube | User with Codex script help | Not started | Medium | Video script TBD | Video URL | Record DevTools verification demo, 60–120 seconds |
+| YouTube | User | Channel created; first video published 2026-06-14 | Medium | Video script by Claude | https://youtu.be/Jlks9EU9I3Q | Second video: JSON Diff demo or 50MB large file handling |
 | Wikipedia | User only, later | Not ready | Very high | N/A | N/A | Do not attempt until independent notability coverage exists |
 
 ## Proof Log
@@ -52,6 +52,7 @@ The user should complete tasks when the platform depends on founder identity, ac
 | 2026-06-11 | Indie Hackers | Proof URL provided | https://www.indiehackers.com/product/safejson-2 | Product page URL provided by user |
 | 2026-06-12 | Product Hunt | Cleaned up | https://www.producthunt.com/products/safejson-privacy?launch=safejson-privacy | URL → safejson.dev; wording → no pasted-content upload / verify in DevTools; screenshots + video added |
 | 2026-06-14 | Edge Add-ons | Approved and live | https://microsoftedge.microsoft.com/addons/detail/fjknnlcmogdhhnehcillihjhdgencgeh | Extension live on Edge Add-ons store |
+| 2026-06-14 | YouTube | First video published | https://youtu.be/Jlks9EU9I3Q | "Verify Any JSON Formatter Is Safe" — 30-second DevTools test walkthrough |
 | 2026-06-12 | Google Search Console sitemap | Success | `/sitemap.xml` in GSC | Submitted sitemap discovered 24 pages; status successful |
 | 2026-06-12 | Bing Webmaster sitemap | Success | `https://www.safejson.dev/sitemap.xml` | Known sitemaps: 1; errors: 0; warnings: 0; total URLs discovered: 24 |
 | 2026-06-12 | Brand Authority Re-Scan | 24/100 (+2) | GEO-BRAND-MENTIONS.md | Decisions: GitHub README=DONE, GitHub repo settings=PENDING USER, LinkedIn sameAs=WAIT, Wikidata=NO, Show HN=DEFER |
