@@ -42,4 +42,4 @@ The fix is simple: take 30 seconds to check. Open DevTools. Look at the Network 
 
 ---
 
-*I built SafeJSON after learning about the jsonformatter.org breach. It is open source (MIT) at [github.com/s01071233604-tech/safejson](https://github.com/s01071233604-tech/safejson).*
+*I built SafeJSON after learning about the jsonformatter.org breach. It is open source (MIT) at [github.com/Json-Lee-git/SafeJSON](https://github.com/Json-Lee-git/SafeJSON).*

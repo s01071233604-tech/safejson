@@ -47,7 +47,7 @@
 | Platform | Score | Change | Notes |
 |----------|-------|--------|-------|
 | **DEV.to** | 55 | NEW (+55) | 3 posts published; 1 comment received (user suggested CSP); founder replied. Strongest organic platform now. |
-| **GitHub** | 35 | -25 | Repo exists at `s01071233604-tech/safejson` but is **invisible in GitHub search**. 6 other repos share the "safejson" name (NYT, Palantir, Evan Shortiss, snapcore, ryan-haskell, Haskell safe-json). Zero discoverability. |
+| **GitHub** | 35 | -25 | Repo exists at `Json-Lee-git/SafeJSON` but is **invisible in GitHub search**. 6 other repos share the "safejson" name (NYT, Palantir, Evan Shortiss, snapcore, ryan-haskell, Haskell safe-json). Zero discoverability. |
 | **Product Hunt** | 30 | +5 | Page live at `/products/safejson-privacy`. ~3 followers. Reviews page indexed. |
 | **Edge Add-ons** | 15 | -- | Extension submitted, under review. |
 | **npm** | 10 | -15 | `@safjson/safejson-formatter` published but zero web search results. |
@@ -58,7 +58,7 @@
 
 ### Critical Finding: Name Collision Problem
 
-Searching `site:github.com SafeJSON` returns **six competing repos** — none of them ours. The main repo (`s01071233604-tech/safejson`) does not appear in any GitHub search. This is a structural discoverability blocker. AI systems scraping GitHub for entity data will pick up NYT/safejson (Python) or Palantir/pkg/safejson (Go) instead of the SafeJSON.dev web tool. Mitigation: add `safejson-dev` to GitHub repo name or description to disambiguate.
+Searching `site:github.com SafeJSON` returns **six competing repos** — none of them ours. The main repo (`Json-Lee-git/SafeJSON`) does not appear in any GitHub search. This is a structural discoverability blocker. AI systems scraping GitHub for entity data will pick up NYT/safejson (Python) or Palantir/pkg/safejson (Go) instead of the SafeJSON.dev web tool. Mitigation: add `safejson-dev` to GitHub repo name or description to disambiguate.
 
 ---
 

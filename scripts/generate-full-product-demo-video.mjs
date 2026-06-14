@@ -86,9 +86,9 @@ async function makeVoiceover() {
       "-m",
       "edge_tts",
       "--voice",
-      "en-US-GuyNeural",
+      "en-US-AvaNeural",
       "--rate",
-      "-8%",
+      "-6%",
       "--pitch",
       "-1Hz",
       "--file",
@@ -501,6 +501,11 @@ async function runDemo() {
 await makeVoiceover();
 await runDemo();
 
+const rawVideoSeconds = await mediaDurationSeconds(webmFile);
+const voiceoverSeconds = await mediaDurationSeconds(wavFile);
+const targetSeconds = Math.min(90, Math.max(60, voiceoverSeconds + 4));
+const videoSetPts = targetSeconds / rawVideoSeconds;
+
 await run(ffmpegPath, [
   "-y",
   "-i",
@@ -508,13 +513,13 @@ await run(ffmpegPath, [
   "-i",
   wavFile,
   "-filter_complex",
-  "[0:v]setpts=0.68*PTS[v];[1:a]apad=pad_dur=8[a]",
+  `[0:v]setpts=${videoSetPts.toFixed(4)}*PTS[v];[1:a]apad=pad_dur=6[a]`,
   "-map",
   "[v]",
   "-map",
   "[a]",
   "-t",
-  "85",
+  targetSeconds.toFixed(2),
   "-c:v",
   "libx264",
   "-preset",
@@ -536,6 +541,10 @@ console.log(
     {
       outputFile: mp4File,
       bytes: stat.size,
+      rawVideoSeconds,
+      voiceoverSeconds,
+      targetSeconds,
+      videoSetPts,
       includes: [
         "Formatter",
         "Validator",

@@ -134,7 +134,7 @@ G2/Capterra/TrustRadius: do NOT submit until 20+ regular users exist. Zero-revie
 | 1 | Product Hunt | 1 | Live | producthunt.com/products/safejson-privacy | Launched 2026-06-11; cleanup needed per checklist above |
 | 2 | SaaSHub | 2 | Submitted | saashub.com/safejson-alternatives | 2026-06-11 |
 | 3 | Indie Hackers | 2 | Submitted | indiehackers.com/product/safejson-2 | 2026-06-11 |
-| 4 | GitHub | 2 | Done | github.com/s01071233604-tech/safejson | — |
+| 4 | GitHub | 2 | Done | github.com/Json-Lee-git/SafeJSON | — |
 | 5 | DEV.to | 8 | Active | dev.to (3 posts published) | 2026-06-09 |
 | 6 | AlternativeTo | 2 | Pending | — | After Jun 18 |
 | 7 | Futurepedia | 3 | Not started | — | TBD |

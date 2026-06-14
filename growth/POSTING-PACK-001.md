@@ -3,7 +3,7 @@
 Use this pack for the first external distribution wave. Keep edits natural and platform-specific. Do not spam the same text everywhere.
 
 Primary URL: https://www.safejson.dev
-GitHub: https://github.com/s01071233604-tech/safejson
+GitHub: https://github.com/Json-Lee-git/SafeJSON
 Pricing: https://www.safejson.dev/pricing
 Answers page: https://www.safejson.dev/answers
 
@@ -70,7 +70,7 @@ Pro tools are:
 
 The project is open source:
 
-https://github.com/s01071233604-tech/safejson
+https://github.com/Json-Lee-git/SafeJSON
 
 I am trying to keep the product simple: free core formatter, paid advanced tools, no ads, no pasted-content analytics, and no server-side JSON processing.
 
@@ -137,7 +137,7 @@ The main idea is verifiable privacy. Open DevTools -> Network, paste JSON, use t
 It includes free formatter/validator/viewer/parser tools, plus paid Pro tools for JSON Diff, JWT decoding, JSONPath, and JSON Schema validation.
 
 The project is open source:
-https://github.com/s01071233604-tech/safejson
+https://github.com/Json-Lee-git/SafeJSON
 
 I built it after seeing how often developers paste production API responses, JWTs, and config blobs into random online tools. Feedback welcome, especially on the privacy verification flow.
 ```

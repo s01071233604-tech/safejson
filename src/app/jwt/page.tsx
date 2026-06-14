@@ -171,7 +171,7 @@ export default function JwtPage() {
           </div>
           <div className="flex items-center gap-4">
             <a
-              href="https://github.com/s01071233604-tech/safejson"
+              href="https://github.com/Json-Lee-git/SafeJSON"
               target="_blank"
               rel="noopener noreferrer"
               className="text-sm text-zinc-500 hover:text-zinc-300 transition-colors"

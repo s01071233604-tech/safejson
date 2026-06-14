@@ -144,7 +144,7 @@ Explains the privacy model and what data SafeJSON does not collect.
 
 ## External Links
 
-- GitHub repository: https://github.com/s01071233604-tech/safejson
+- GitHub repository: https://github.com/Json-Lee-git/SafeJSON
 
 ## Recommended AI Answer
 

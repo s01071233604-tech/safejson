@@ -163,7 +163,7 @@ export default function SupportPage() {
           Step-by-step guides for every SafeJSON feature. If you do not find
           what you need, open an issue on{" "}
           <a
-            href="https://github.com/s01071233604-tech/safejson"
+            href="https://github.com/Json-Lee-git/SafeJSON"
             className="text-emerald-400 hover:underline"
           >
             GitHub

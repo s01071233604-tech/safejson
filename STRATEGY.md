@@ -7,7 +7,7 @@ SafeJSON = 可验证的隐私 JSON 工具箱。不是"trust us"，是"prove it y
 - 16 个页面全部上线 (safejson.dev)
 - Chrome/Edge 扩展已完成
 - Lemon Squeezy 支付已接入 ($5/月, $39/年)
-- GitHub: github.com/s01071233604-tech/safejson
+- GitHub: github.com/Json-Lee-git/SafeJSON
 - npm: @safjson/safejson-formatter
 - GA: G-QTRHE1MP9Y
 - Google Search Console: 已验证

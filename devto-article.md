@@ -51,7 +51,7 @@ These are not hypothetical risks. Real developers had their credentials exposed.
 
 ## Open Source and Verifiable
 
-SafeJSON is open source (MIT license). Every line of code is on [GitHub](https://github.com/s01071233604-tech/safejson). You do not need to trust my claims — you can audit the code yourself.
+SafeJSON is open source (MIT license). Every line of code is on [GitHub](https://github.com/Json-Lee-git/SafeJSON). You do not need to trust my claims — you can audit the code yourself.
 
 The entire application is a static Next.js site deployed on Vercel. There is no backend. No database. No API routes that process user data. The only network requests are for loading the page itself.
 
@@ -63,4 +63,4 @@ If you have been using jsonformatter.org or similar tools out of habit, take 30 
 
 ---
 
-*I built this as a solo developer. Feedback, bug reports, and contributions are welcome on [GitHub](https://github.com/s01071233604-tech/safejson).*
+*I built this as a solo developer. Feedback, bug reports, and contributions are welcome on [GitHub](https://github.com/Json-Lee-git/SafeJSON).*

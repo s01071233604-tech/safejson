@@ -20,7 +20,7 @@ export function OrganizationSchema() {
         name: "SafeJSON",
         url: "https://www.safejson.dev",
         logo: "https://www.safejson.dev/favicon.ico",
-        sameAs: ["https://github.com/s01071233604-tech/safejson"],
+        sameAs: ["https://github.com/Json-Lee-git/SafeJSON"],
       }}
     />
   );
@@ -165,7 +165,7 @@ export function SoftwareAppSchema() {
       "@type": "Organization",
       name: "SafeJSON",
       url: "https://www.safejson.dev",
-      sameAs: ["https://github.com/s01071233604-tech/safejson"],
+      sameAs: ["https://github.com/Json-Lee-git/SafeJSON"],
     },
     url: "https://www.safejson.dev",
   };

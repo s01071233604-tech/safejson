@@ -165,7 +165,7 @@ Pro tools are:
 
 The project is open source:
 
-https://github.com/s01071233604-tech/safejson
+https://github.com/Json-Lee-git/SafeJSON
 
 I am trying to keep the product simple: free core formatter, paid advanced tools, no ads, no pasted-content analytics, and no server-side JSON processing.
 
@@ -184,7 +184,7 @@ Feedback I am especially looking for:
 
 **Status (2026-06-12):** Done — created by user.
 
-**Repo:** https://github.com/s01071233604-tech/safejson
+**Repo:** https://github.com/Json-Lee-git/SafeJSON
 
 **Category:** General
 
@@ -220,10 +220,10 @@ Specific feedback I'd love:
 - Are there any claims that feel too broad or need tighter wording?
 
 Website: https://www.safejson.dev
-Source: https://github.com/s01071233604-tech/safejson
+Source: https://github.com/Json-Lee-git/SafeJSON
 ```
 
-**Proof link:** https://github.com/s01071233604-tech/safejson/discussions/1
+**Proof link:** https://github.com/Json-Lee-git/SafeJSON/discussions/1
 
 ---
 
@@ -239,7 +239,7 @@ SafeJSON is built around one idea: you should be able to verify that your JSON n
 
 Free core tools. Pro tools (Diff, JWT, JSONPath, Schema) at $5/month.
 
-Open source: github.com/s01071233604-tech/safejson
+Open source: github.com/Json-Lee-git/SafeJSON
 
 Would love feedback from developers — especially on the privacy verification flow.
 ```
@@ -284,7 +284,7 @@ The main idea is verifiable privacy. Open DevTools -> Network, paste JSON, use t
 It includes free formatter/validator/viewer/parser tools, plus paid Pro tools for JSON Diff, JWT decoding, JSONPath, and JSON Schema validation.
 
 The project is open source:
-https://github.com/s01071233604-tech/safejson
+https://github.com/Json-Lee-git/SafeJSON
 
 I built it after seeing how often developers paste production API responses, JWTs, and config blobs into random online tools. Feedback welcome, especially on the privacy verification flow.
 ```
@@ -349,7 +349,7 @@ Would love feedback from other dev tool builders on the privacy positioning.
 - [x] Indie Hackers: listing URL recorded in tracker
 - [x] DEV.to: 3 posts published; 1 comment replied by founder 2026-06-12
 - [x] CSP trust signal: deployed 2026-06-12 (10 directives, verified via growth:check)
-- [x] GitHub Discussion: created https://github.com/s01071233604-tech/safejson/discussions/1
+- [x] GitHub Discussion: created https://github.com/Json-Lee-git/SafeJSON/discussions/1
 - [ ] LinkedIn: publish founder post, add proof URL
 - [ ] LinkedIn company page: complete registration, add to schema
 - [ ] AlternativeTo: submit on/after June 18, add proof URL
