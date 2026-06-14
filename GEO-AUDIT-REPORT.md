@@ -112,7 +112,7 @@ Sitemap: https://www.safejson.dev/sitemap.xml
 |----------|--------|-------|----------|
 | **Wikipedia** | Absent | 0/30 | No Wikipedia article. This is the single biggest GEO gap. |
 | **Reddit** | Minimal/Negative | 5/20 | Account banned from r/webdev. No active discussions. |
-| **YouTube** | Absent | 0/15 | No channel, no video content, no third-party mentions found. |
+| **YouTube** | Present | 8/15 | Channel created 2026-06-14; first video published ("How to Verify Any JSON Formatter Is Safe"); 2 more planned per YOUTUBE-CONTENT-CLUSTER.md. No third-party mentions yet. |
 | **LinkedIn** | Absent | 0/10 | No company page. No personal profile linked. |
 | **GitHub** | Present | 15/15 | Active repo, MIT license, linked from homepage + footer + schema |
 | **Industry/Niche** | Minimal | 10/25 | Product Hunt badge on README but post not launched. Edge Add-ons submitted. No G2/Capterra/AlternativeTo listings yet. |

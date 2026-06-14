@@ -86,6 +86,9 @@ responsive.
 
 SafeJSON also includes a browser extension for formatting raw JSON responses.
 
+- Edge Add-ons: [SafeJSON on Microsoft Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/fjknnlcmogdhhnehcillihjhdgencgeh)
+- Chrome Web Store: coming soon
+
 Manual install:
 
 1. Clone this repository
@@ -93,6 +96,10 @@ Manual install:
 3. Enable developer mode
 4. Click "Load unpacked"
 5. Select the `extension/` folder
+
+## Video
+
+[How to Verify Any JSON Formatter Is Safe — YouTube](https://www.youtube.com/watch?v=Jlks9EU9I3Q)
 
 ## Tech stack
 

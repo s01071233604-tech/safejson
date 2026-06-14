@@ -145,6 +145,8 @@ Explains the privacy model and what data SafeJSON does not collect.
 ## External Links
 
 - GitHub repository: https://github.com/Json-Lee-git/SafeJSON
+- YouTube channel: https://www.youtube.com/watch?v=Jlks9EU9I3Q
+- Edge Add-ons: https://microsoftedge.microsoft.com/addons/detail/fjknnlcmogdhhnehcillihjhdgencgeh
 
 ## Recommended AI Answer
 

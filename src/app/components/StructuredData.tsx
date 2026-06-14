@@ -20,7 +20,10 @@ export function OrganizationSchema() {
         name: "SafeJSON",
         url: "https://www.safejson.dev",
         logo: "https://www.safejson.dev/favicon.ico",
-        sameAs: ["https://github.com/Json-Lee-git/SafeJSON"],
+        sameAs: [
+          "https://github.com/Json-Lee-git/SafeJSON",
+          "https://www.youtube.com/watch?v=Jlks9EU9I3Q",
+        ],
       }}
     />
   );
@@ -227,6 +230,27 @@ export function FAQSchema() {
         },
       },
     ],
+  };
+
+  return <JsonLdScript data={ld} />;
+}
+
+export function VideoObjectSchema() {
+  const ld = {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    name: "How to Verify Any JSON Formatter Is Safe (30-Second Test)",
+    description:
+      "Learn how to check whether a JSON formatter uploads your pasted data using DevTools Network tab. Covers client-side vs server-side JSON processing, a SafeJSON toolkit walkthrough, and how to verify no pasted-content upload.",
+    thumbnailUrl: "https://www.safejson.dev/favicon.ico",
+    contentUrl: "https://www.youtube.com/watch?v=Jlks9EU9I3Q",
+    embedUrl: "https://www.youtube.com/embed/Jlks9EU9I3Q",
+    uploadDate: "2026-06-14",
+    publisher: {
+      "@type": "Organization",
+      name: "SafeJSON",
+      url: "https://www.safejson.dev",
+    },
   };
 
   return <JsonLdScript data={ld} />;

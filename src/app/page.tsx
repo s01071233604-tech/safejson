@@ -2,7 +2,7 @@
 
 import { useState, useCallback, useMemo, useEffect } from "react";
 import JsonTreeView, { type JsonValue } from "./components/JsonTreeView";
-import { FAQSchema, SoftwareAppSchema } from "./components/StructuredData";
+import { FAQSchema, SoftwareAppSchema, VideoObjectSchema } from "./components/StructuredData";
 import LocalProcessingNote from "./components/LocalProcessingNote";
 import NetworkRequestIndicator from "./components/NetworkRequestIndicator";
 import Footer from "./components/Footer";
@@ -623,6 +623,7 @@ export default function Home() {
       <Footer />
 
       <SoftwareAppSchema />
+      <VideoObjectSchema />
       <FAQSchema />
     </div>
   );

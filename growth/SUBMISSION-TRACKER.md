@@ -40,7 +40,7 @@ The user should complete tasks when the platform depends on founder identity, ac
 | LinkedIn company page | User only | In progress (registration started 2026-06-11) | Medium | Product description | Company page URL | Complete registration; add to Person + Organization schema sameAs |
 | Edge Add-ons | User | Approved 2026-06-14 | Low | Extension listing | https://microsoftedge.microsoft.com/addons/detail/fjknnlcmogdhhnehcillihjhdgencgeh | Live on Edge Add-ons store |
 | Chrome Web Store | User | Blocked — $5 developer registration requires Visa/MC; user has no card | Low | Same extension package as Edge | Store URL | Explore alternative payment methods or virtual card options |
-| YouTube | User | Channel created; first video published 2026-06-14 | Medium | Video script by Claude | https://youtu.be/Jlks9EU9I3Q | Second video: JSON Diff demo or 50MB large file handling |
+| YouTube | User with Codex script help | Channel live; Video 1/3 published 2026-06-14 | Medium | `growth/YOUTUBE-CONTENT-CLUSTER.md` | https://youtu.be/Jlks9EU9I3Q | Videos 2+3: JSON Diff demo and JWT Decoder walkthrough (scripts ready) |
 | Wikipedia | User only, later | Not ready | Very high | N/A | N/A | Do not attempt until independent notability coverage exists |
 
 ## Proof Log
